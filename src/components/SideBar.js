@@ -7,8 +7,7 @@ const Sidebar = () => {
       <ul>
         <li>Home</li>
         <li>Profile</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>Setting</li>
       </ul>
     </div>
   );
