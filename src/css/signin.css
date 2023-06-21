@@ -1,0 +1,102 @@
+.logo{
+    width: 200px;
+    height: 70px;
+}
+.main_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .second_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .second_div input{
+    background-color: #fafafa;
+    border: 1px solid #e3e3e3;
+    color: #929497;
+    width: 100%;
+    font-size: small;
+    padding: 3%;
+  }
+  .or{
+    font-size: small;
+    color: #929497;
+  }
+  .forget_pass{
+    color: #6f6d94;
+    font-size: small;
+  }
+  .option_or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .option_or div {
+    flex: 1;
+    margin: 0 5px;
+  }
+  .hr_line {
+    height: 1px;
+    background-color: black;
+    color: black;
+    width: 115px;
+    margin-top: 20px; /* Add margin to adjust spacing */
+    margin-bottom: 20px; /* Add margin to adjust spacing */
+  }
+  .button__log{
+     width: 100%;
+     background-color: #a303a0;
+     color: white;
+     border: none;
+     border-radius:8px ;
+     -webkit-border-radius:8px ;
+     -moz-border-radius:8px ;
+     -ms-border-radius:8px ;
+     -o-border-radius:8px ;
+     width: 100%;
+}
+  .form_login {
+    border: 1px solid #ccc;
+    /* border-radius: 8px; */
+    padding: 20px;
+    width: 100%;
+    max-width: 320px; 
+    margin: 0 auto; 
+  }
+  .signup {
+    border: 1px solid #ccc;
+    padding: 20px 40px;
+    width: 100%; 
+    max-width: 320px; 
+    margin: 0 auto; 
+ 
+    font-size: medium;
+    color: #929497 ;
+  }
+  .app{
+    width: 100%; 
+    max-width: 320px; 
+    margin: 0 auto; 
+  }
+  @media (max-width: 768px) {
+    .form_login ,
+    .signup ,
+    .app{
+      max-width: 300px; 
+    }
+  }
+  
+  .input_field {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .signup a{
+    font-size: medium;
+    text-decoration: none;
+    font-weight: 400;
+  }
