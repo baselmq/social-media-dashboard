@@ -1,0 +1,70 @@
+.signup_header{
+    max-width: 280px;
+    margin: 0 auto;
+    color: #737373;
+    font-weight: 600;
+}
+.form_signup{
+    border: 1px solid #ccc;
+    /* border-radius: 8px; */
+    padding: 20px;
+    width: 100%; /* Set initial width to 100% */
+    max-width: 320px; /* Set maximum width to 400px */
+    margin: 0 auto; 
+}
+@media (max-width: 768px) {
+    .form_signup ,
+    .signup ,
+    .app{
+      max-width: 300px; /* Adjust the maximum width for smaller screens */
+    }
+  }
+  .lable_signup{
+    font-family: 'Popines', sans-serif;
+  }
+  .checked{
+    color: green;
+  }
+  .error_message{
+    color: red;
+    font-size: small;
+  }
+  .password-conditions{
+    color: red;
+    font-size: small;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+  .error_message{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+  }
+  /* pop up style */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-contentsign {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

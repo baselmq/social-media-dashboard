@@ -1,0 +1,12 @@
+.card__about {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  padding:30px;
+}
+
+.item__about {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 10px 0;
+}
