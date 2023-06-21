@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="bodyApp">
       <NavBar />
-      <Sidebar />
+      <CardMightKnow />
     </div>
   );
 }
