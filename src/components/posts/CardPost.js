@@ -2,7 +2,7 @@ import React from "react";
 import "../../css/index.css";
 import ImageUser from "../cache_image/ImageUser";
 import userData from "../../data/data";
-import { MyIcons } from "../../util/MyIcons";
+import { PathIcons } from "../../util/PathIcons";
 import imageC from "../../assets/images/cover.jpg";
 import InputField from "../inputs/InputField";
 const CardPost = () => {
@@ -16,7 +16,7 @@ const CardPost = () => {
             <span className="user_name_post d-block">{data.firstName}</span>
             <span className="time_post d-block">{`${15} mins ago`}</span>
           </div>
-          <span className="menu_dots_post">{MyIcons.menuDots}</span>
+          <span className="menu_dots_post">{PathIcons.menuDots}</span>
         </div>
         <div className="body_post py-4">
           <img src={imageC} alt="image_post" />
@@ -30,11 +30,11 @@ const CardPost = () => {
         <div className="footer_post">
           <div className="d-flex gap-4">
             <div className="like-post d-flex align-items-center gap-2">
-              {MyIcons.unlike}
+              {PathIcons.unlike}
               {` ${150}K`}
             </div>
             <div className="comment-post d-flex align-items-center gap-2">
-              {MyIcons.comment}
+              {PathIcons.comment}
               {` ${3000}`}
             </div>
           </div>

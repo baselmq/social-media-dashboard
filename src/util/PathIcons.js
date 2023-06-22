@@ -7,7 +7,7 @@ const iconPost = {
   color: "#a303a0",
   fontSize: "20px",
 };
-export class MyIcons {
+export class PathIcons {
   static addFriend = (<i className="fa-solid fa-user-plus" style={style}></i>);
   static messenger = (
     <i className="fa-brands fa-facebook-messenger" style={style}></i>

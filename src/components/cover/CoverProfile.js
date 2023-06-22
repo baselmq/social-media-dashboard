@@ -4,7 +4,7 @@ import "../../css/index.css";
 import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
 import Buttons from "../btn/Buttons";
-import { MyIcons } from "../../util/MyIcons";
+import { PathIcons } from "../../util/PathIcons";
 const CoverProfile = () => {
   const data = userData[0];
   return (
@@ -19,17 +19,20 @@ const CoverProfile = () => {
         <div className="user_name fs-3">{`${data.firstName} ${data.lastName}`}</div>
 
         <div className="btn_cover pt-2">
-          <div className="fs-6 friends-profile" onClick={openFriend}>{`${250} friends`}</div>
+          <div
+            className="fs-6 friends-profile"
+            onClick={openFriend}
+          >{`${250} friends`}</div>
           <div className="d-flex gap-3">
             <Buttons
               text={"message"}
               onPress={click}
-              icon={MyIcons.messenger}
+              icon={PathIcons.messenger}
             />
             <Buttons
               text={"add friend"}
               onPress={click}
-              icon={MyIcons.addFriend}
+              icon={PathIcons.addFriend}
             />
           </div>
         </div>
@@ -40,7 +43,5 @@ const CoverProfile = () => {
 function click() {
   console.log(1);
 }
-function openFriend() {
-  
-}
+function openFriend() {}
 export default CoverProfile;

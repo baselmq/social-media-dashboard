@@ -1,11 +1,11 @@
 import React from "react";
 import "./input_field.css";
-import { MyIcons } from "../../util/MyIcons";
+import { PathIcons } from "../../util/PathIcons";
 const InputField = () => {
   return (
     <div className="custom_input mt-3 d-flex align-items-center">
       <input type="text" placeholder="add comment" />
-      <span>{MyIcons.send}</span>
+      <span>{PathIcons.send}</span>
     </div>
   );
 };
