@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../css/index.css";
-import userData from "../data/data";
+import "../../css/index.css";
+import userData from "../../data/data";
 function CardAbout() {
   const data = userData[0];
   const styleItem = {

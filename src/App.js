@@ -1,15 +1,14 @@
-import CardAbout from "./components/CardAbout";
-import NavBar from "./components/NavBar";
 import "./css/index.css";
-import CardActive from "./components/CardActive";
-import CardMightKnow from "./components/CardMightKnow";
-import Sidebar from "./components/SideBar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 function App() {
   return (
-    <div className="bodyApp">
-      <NavBar />
-      <CardMightKnow />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/profile" element={<Profile />} />
+      {/* <Route path="/profile" element={<Profile />} /> */}
+    </Routes>
   );
 }
 

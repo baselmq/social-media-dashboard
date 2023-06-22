@@ -1,0 +1,24 @@
+.container_post {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.user_name_post {
+  font-size: 16px;
+}
+.time_post {
+  font-size: 13px;
+}
+.header_post {
+  position: relative;
+  width: 100%;
+}
+.menu_dots_post {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+}
+.body_post img{
+    width: 100%;
+    border-radius: 10px;
+}

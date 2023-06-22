@@ -1,5 +1,6 @@
 .custom_nav {
   background-color: #f7f7f8;
+
 }
 
 .input_wrapper {
@@ -19,4 +20,17 @@
 }
 .custom_items {
   width: 100%;
+}
+.custom_item_nav {
+  width: 5rem;
+  margin: 0 10px;
+}
+.custom_item_nav i {
+  font-size: 22px;
+}
+.custom_active i {
+  color: #a303a0;
+}
+.custom_active {
+  border-bottom: 2.5px solid #a303a0;
 }

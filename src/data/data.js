@@ -1,7 +1,7 @@
 const userData = [
   {
     id: 0,
-    firstName: "mohammad",
+    firstName: "basel",
     lastName: "Mahmoud",
     image:
       "https://img.freepik.com/premium-photo/portrait-smiling-young-man-looking-camera_33839-1731.jpg",
@@ -12,6 +12,7 @@ const userData = [
     email: "charles5182@ummoh.com",
     phone: "33757005467",
     statusLogin: "true",
+    statusOnline: "Online",
     friends: [{ fullName: "", email: "" }],
     friendsRequest: [{ fullName: "", email: "" }],
     post: [

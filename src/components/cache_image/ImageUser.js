@@ -9,7 +9,7 @@ const ImageUser = (props) => {
     // objectPosition: "100% 0",
   };
   return (
-    <div>
+    <div className={props.classImage}>
       <img src={props.image} alt={props.name} style={imageStyle} />
     </div>
   );

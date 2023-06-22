@@ -1,12 +1,91 @@
-@import "cardAbout.css";
-@import "navBar.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "~@flaticon/flaticon-uicons/css/all/all";
+@import "../components/cards/cardAbout.css";
+@import "../components/navbar/navBar.css";
+@import "../components/cover/cover_profile.css";
+@import "../components/posts/card_post.css";
+@import "../components/posts/add_post.css";
+:root {
+  /* Light mode colors */
+  --background-color: #ffffff;
+  --text-color: #252525;
+  --accent-color: #2f4663;
+  --light-accent-color: #277a8f;
+  --secondary-color: #868e96;
+  --card-color: #f7f7f7;
+  --hr-color: #eeeeee;
+  --button-color: #f6f8fa;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  /* Dark mode colors */
+  --background-color-dark: #0d1117;
+  --text-color-dark: #f7f7f8;
+  --accent-color-dark: #395271;
+  --light-accent-color-dark: #277a8f;
+  --card-color-dark: #171d26;
+  --secondary-color-dark: #868e96;
+  --hr-color-dark: #33383f;
+  --button-color-dark: #21262d;
 }
-.bodyApp{
-    background-color: #f7f7f8;
-    height: 100vh;
+
+/* Dark mode */
+body.dark-mode {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --secondary-color: var(--secondary-color-dark);
+  --card-color: var(--card-color-dark);
+  --button-color: var(--button-color-dark);
+  --hr-color: var(--hr-color-dark);
+  --light-icon: var(--dark-icon);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+body {
+  background-color: var(--background-color);
+}
+
+.bodyAllPages {
+  background-color: #f7f7f8;
+  padding: 0 100px;
+}
+
+.btnWithIcon {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0 20px 0 12px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #a303a0;
+  color: #fff;
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+}
+
+/* Medium Screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bodyAllPages {
+    padding: 0 40px;
+  }
+}
+
+/* Small Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .bodyAllPages {
+    padding: 0 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .bodyAllPages {
+    padding: 0 20px;
+  }
 }

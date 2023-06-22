@@ -1,5 +1,5 @@
 import { useState } from "react";
-import userData from "../data/data";
+import userData from "../../data/data";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");

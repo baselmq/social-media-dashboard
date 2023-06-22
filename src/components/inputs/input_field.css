@@ -1,0 +1,20 @@
+.custom_input {
+  background-color: #f7f7f8;
+  width: 100%;
+  padding: 0 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.custom_input input {
+  border: none;
+  outline: none;
+  background-color: #f7f7f8;
+  width: 100%;
+  padding: 8px 0px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.custom_input input::placeholder {
+  font-size: 14px;
+}
