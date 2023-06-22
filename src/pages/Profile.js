@@ -6,6 +6,7 @@ import CardPost from "../components/posts/CardPost";
 import CardActive from "../components/cards/CardActive";
 import CardMightKnow from "../components/cards/CardMightKnow";
 import AddPost from "../components/posts/AddPost";
+import Friends from "../components/friend_card/Friends";
 
 const Profile = () => {
   return (
@@ -27,6 +28,7 @@ const Profile = () => {
           <CardActive />
         </div>
       </div>
+      <Friends />
     </div>
   );
 };

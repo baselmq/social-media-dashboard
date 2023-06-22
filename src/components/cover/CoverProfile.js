@@ -19,7 +19,7 @@ const CoverProfile = () => {
         <div className="user_name fs-3">{`${data.firstName} ${data.lastName}`}</div>
 
         <div className="btn_cover pt-2">
-          <div className="fs-6 position-profile">{`${data.email}`}</div>
+          <div className="fs-6 friends-profile" onClick={openFriend}>{`${250} friends`}</div>
           <div className="d-flex gap-3">
             <Buttons
               text={"message"}
@@ -39,5 +39,8 @@ const CoverProfile = () => {
 };
 function click() {
   console.log(1);
+}
+function openFriend() {
+  
 }
 export default CoverProfile;

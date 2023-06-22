@@ -27,6 +27,16 @@
   display: flex;
   justify-content: space-between;
 }
+
+.friends-profile {
+  color: #a303a0;
+  transition-duration: 0.4s;
+}
+.friends-profile:hover {
+  cursor: pointer;
+  color: #000;
+  transition-duration: 0.4s;
+}
 /* Large Screens */
 @media (min-width: 1200px) {
 }
@@ -67,7 +77,7 @@
     left: 50%;
     transform: translate(-50%, -65%);
   }
-  .position-profile {
+  .friends-profile {
     margin-bottom: 10px;
   }
   .image_profile img {
