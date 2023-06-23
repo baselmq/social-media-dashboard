@@ -8,32 +8,34 @@ import { PathIcons } from "../../util/PathIcons";
 const CoverProfile = () => {
   const data = userData[0];
   return (
-    <div className="container_profile">
-      <img className="cover_profile" src={coverImage} alt="cover" />
-      <ImageUser
-        image={data.image}
-        name={data.name}
-        classImage={"image_profile"}
-      />
-      <div className="bottom_cover mt-4 px-5">
-        <div className="user_name fs-3">{`${data.firstName} ${data.lastName}`}</div>
+    <div className="row d-flex justify-content-center">
+      <div className="col-xl-11 col-lg-11 col-md-9 container_profile">
+        <img className="cover_profile" src={coverImage} alt="cover" />
+        <ImageUser
+          image={data.image}
+          name={data.name}
+          classImage={"image_profile"}
+        />
+        <div className="bottom_cover mt-4 px-5">
+          <div className="user_name fs-3">{`${data.firstName} ${data.lastName}`}</div>
 
-        <div className="btn_cover pt-2">
-          <div
-            className="fs-6 friends-profile"
-            onClick={openFriend}
-          >{`${250} friends`}</div>
-          <div className="d-flex gap-3">
-            <Buttons
-              text={"message"}
-              onPress={click}
-              icon={PathIcons.messenger}
-            />
-            <Buttons
-              text={"add friend"}
-              onPress={click}
-              icon={PathIcons.addFriend}
-            />
+          <div className="btn_cover pt-2">
+            <div
+              className="fs-6 friends-profile"
+              onClick={openFriend}
+            >{`${250} friends`}</div>
+            <div className="d-flex gap-3">
+              <Buttons
+                text={"message"}
+                onPress={click}
+                icon={PathIcons.messenger}
+              />
+              <Buttons
+                text={"add friend"}
+                onPress={click}
+                icon={PathIcons.addFriend}
+              />
+            </div>
           </div>
         </div>
       </div>

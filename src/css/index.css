@@ -5,6 +5,7 @@
 @import "../components/cover/cover_profile.css";
 @import "../components/posts/card_post.css";
 @import "../components/posts/add_post.css";
+@import "./profile.css";
 :root {
   /* Light mode colors */
   --background-color: #ffffff;

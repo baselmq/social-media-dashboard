@@ -1,0 +1,36 @@
+.md-show-card {
+  display: none;
+}
+.right_cards_profile {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .md-show-card {
+    display: none;
+  }
+  .right_cards_profile {
+    display: none;
+  }
+}
+
+/* Small Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .md-show-card {
+    display: block;
+  }
+  .right_cards_profile {
+    display: none;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .md-show-card {
+    display: block;
+  }
+  .right_cards_profile {
+    display: none;
+  }
+}
