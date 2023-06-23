@@ -1,5 +1,5 @@
 import React from "react";
-import { PathIcons } from "../../util/PathIcons";
+import "../../css/index.css";
 
 const Popup = (props) => {
   return props.trigger ? (
@@ -8,7 +8,7 @@ const Popup = (props) => {
         <div className="header_popup d-flex justify-content-between pb-3">
           <span className="fs-5 d-flex align-items-center">{props.title}</span>
           <button
-            className="btn-close btn__close"
+            className="btn-close custom_btn-close"
             onClick={() => props.setTrigger(false)}
             aria-label="Close"
           ></button>

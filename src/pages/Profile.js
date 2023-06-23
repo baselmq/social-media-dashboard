@@ -28,6 +28,8 @@ const Profile = () => {
           <div className="d-flex flex-column gap-3">
             <AddPost />
             <CardPost />
+            <CardPost />
+            <CardPost />
           </div>
         </div>
         <div className="col-xl-3 d-xl-block d-lg-none d-md-none d-sm-none">

@@ -8,7 +8,7 @@ export const SearchBar = ({ setResults }) => {
     let query = event.target.value;
 
     let updatedList = userData.filter((item) => {
-      return item.name.toLowerCase().includes(query.toLowerCase());
+      return item.firstName.toLowerCase().includes(query.toLowerCase());
     });
     setResults(updatedList);
     setInput(updatedList);

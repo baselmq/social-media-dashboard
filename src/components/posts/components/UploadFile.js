@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-
+import "../../../css/index.css";
+import { PathIcons } from "../../../util/PathIcons";
 const UploadFile = () => {
   const [uploadedFiles, setUploadedFiles] = useState([]);
 
@@ -34,10 +35,11 @@ const UploadFile = () => {
         </div>
       ) : (
         <div
-          className="upload-icon upload__icon mb-3"
+          className="upload-icon upload_area mb-3"
           onClick={() => fileInputRef.current.click()}
         >
-          <p>Upload Video or photo</p>
+          <span className="d-flex gap-2">{PathIcons.upload}
+            Upload Video or photo</span>
         </div>
       )}
 

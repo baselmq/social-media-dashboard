@@ -24,9 +24,10 @@ export class PathIcons {
 
   static image = (<i className="fi fi-rr-images" style={iconPost}></i>);
   static feeling = (<i className="fi fi-rr-grin-alt" style={iconPost}></i>);
+  static upload = (<i class="fa-solid fa-cloud-arrow-up" style={iconPost}></i>);
   static close = (
     <i
-    className="fa-solid fa-circle-xmark"
+      className="fa-solid fa-circle-xmark"
       style={{ color: "red", fontSize: "35px" }}
     ></i>
   );

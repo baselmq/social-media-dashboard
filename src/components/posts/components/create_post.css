@@ -14,3 +14,13 @@
   color: #fff;
   border-radius: 8px;
 }
+.upload_area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2%;
+  border: gainsboro 1px solid;
+  padding: 7%;
+  background-color: #e4e6eb;
+  border-radius: 8px;
+}

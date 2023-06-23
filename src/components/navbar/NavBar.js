@@ -45,14 +45,14 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button> */}
         <div className="d-flex justify-content-end align-items-center" id="">
-          {/* <form className="" role="search">
+          <form className="" role="search">
             <div className="">
               <SearchBar setResults={setResults} />
               {results && results.length > 0 && (
                 <SearchResultList results={results} />
               )}
             </div>
-          </form> */}
+          </form>
           <span className="mx-3">{userData[0].name}</span>
           <ImageUser
             image={userData[0].image}

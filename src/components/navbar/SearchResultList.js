@@ -1,22 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ImageUser from "../cache_image/ImageUser";
 export const SearchResultList = ({ results }) => {
   return (
     <div className="results-list">
       {results.map((result, id) => {
-        const styleImage = {
-          width: "20px",
-          height: "20px",
-        };
         return (
           <Link
-            className=""
+            className="m-2"
             to={`/details?id=${encodeURIComponent(result.idClub - 1)}`}
             key={id}
           >
-            <div className="">
-              <img style={styleImage} src={result.image} alt={result.image} />
-              {result.name}
+            <div className="d-flex align-items-center gap-2">
+              <ImageUser image={result.image} width={45} />
+              {`${result.firstName} ${result.lastName}`}
             </div>
           </Link>
         );

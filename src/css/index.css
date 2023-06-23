@@ -9,6 +9,7 @@
 @import "../components/popup/popup_friends.css";
 @import "../components/popup/popup.css";
 @import "../components/posts/components/create_post.css";
+@import "../components/navbar/searchBar.css";
 :root {
   /* Light mode colors */
   --background-color: #ffffff;

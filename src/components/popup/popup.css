@@ -26,11 +26,11 @@
   cursor: pointer;
 }
 
-.custom_btn_close {
-  background-color: #e4e6eb;
+.custom_btn-close {
+  background-color: #e4e6eb !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  border-radius: 50%;
+  padding: 10px !important;
+  border-radius: 50% !important;
 }
