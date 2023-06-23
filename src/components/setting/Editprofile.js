@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./edit_profile.css"
 export default function EditProfile({ userData, index }) {
   const [showInitialPopup, setShowInitialPopup] = useState(true);
   const [showSettingPopup, setShowSettingPopup] = useState(false);
@@ -177,7 +177,7 @@ export default function EditProfile({ userData, index }) {
                   ) : (
                     <img
                       src={userData[index].image}
-                      alt="Profile Picture"
+                      alt="Profile"
                       className="image-profile"
                     />
                   )}

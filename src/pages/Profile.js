@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "../components/navbar/NavBar";
 import CoverProfile from "../components/cover/CoverProfile";
 import CardAbout from "../components/cards/CardAbout";
@@ -6,8 +6,6 @@ import CardPost from "../components/posts/CardPost";
 import CardActive from "../components/cards/CardActive";
 import CardMightKnow from "../components/cards/CardMightKnow";
 import AddPost from "../components/posts/AddPost";
-import AddPost1 from "../components/AddPost";
-import Friends from "../components/friend_card/Friends";
 
 const Profile = () => {
   return (
@@ -29,7 +27,6 @@ const Profile = () => {
         <div className="col-xl-5 col-lg-7 col-md-8 ">
           <div className="d-flex flex-column gap-3">
             <AddPost />
-            <AddPost1 />
             <CardPost />
           </div>
         </div>

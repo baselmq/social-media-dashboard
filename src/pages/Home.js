@@ -1,7 +1,4 @@
-import React, { useState } from "react";
 import NavBar from "../components/navbar/NavBar";
-import Popup from "../components/popup/PopupFriends";
-import Friends from "../components/friend_card/Friends";
 import AddPost from "../components/posts/AddPost";
 import CardPost from "../components/posts/CardPost";
 
@@ -16,6 +13,7 @@ const Home = () => {
             <div className="d-flex flex-column gap-3">
               <AddPost />
               <CardPost />
+
             </div>
           </div>
         </div>

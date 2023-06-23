@@ -5,9 +5,11 @@ import "../../css/index.css";
 import { PathIcons } from "../../util/PathIcons";
 import Popup from "../popup/Popup";
 import CreatePost from "./components/CreatePost";
+import Felling from "./components/Felling";
 function AddPost() {
   const data = userData[0];
   const [buttonPopup, setButtonPopup] = useState(false);
+  const [felling, setFelling] = useState(false);
   // buttonPopup
   //   ? (document.body.style.overflow = "hidden")
   //   : (document.body.style.overflow = "auto");
@@ -29,7 +31,10 @@ function AddPost() {
         >
           {PathIcons.image} photo/video
         </div>
-        <div className="feeling d-flex align-align-items-start gap-2">
+        <div
+          className="feeling d-flex align-align-items-start gap-2"
+          onClick={() => setFelling(true)}
+        >
           {PathIcons.feeling} feeling/activity
         </div>
       </div>
@@ -39,6 +44,13 @@ function AddPost() {
         title={"Create Post"}
       >
         <CreatePost />
+      </Popup>
+      <Popup
+        trigger={felling}
+        setTrigger={setFelling}
+        title={"How are you feeling?"}
+      >
+        <Felling />
       </Popup>
     </div>
   );
