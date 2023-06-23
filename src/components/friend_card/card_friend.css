@@ -21,3 +21,11 @@
     color: rgb(78, 150, 196);
     text-decoration: underline;
   }
+
+  @media (max-width: 767px) {
+    /* Styles for screens smaller than 768px */
+    .col-md-5 {
+      width: 100%;
+    }
+  }
+
