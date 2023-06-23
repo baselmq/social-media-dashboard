@@ -81,6 +81,7 @@ const AddPost = () => {
           </button>
         </div>
       </div>
+      {/* pop up for input text */}
       {showPopup && (
         <div className='popup'>
           <div className='popup-content'>
@@ -103,6 +104,7 @@ const AddPost = () => {
           </div>
         </div>
       )}
+      {/* pop up for video and photo  */}
       {showPhotoVideoPopup && (
         <div className='photo-video-popup'>
           <div className='popup-content'>
@@ -118,6 +120,7 @@ const AddPost = () => {
               <div>
                 <textarea className='textarea_input' placeholder="What's on your mind? (username)" rows={3} value={postContent} onChange={handlePostChange}></textarea>
               </div>
+        
               {uploadedFiles.length > 0 ? (
                 <div className='uploaded-files'>
                   {uploadedFiles.map((file, index) => {

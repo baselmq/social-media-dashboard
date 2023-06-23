@@ -1,0 +1,23 @@
+.component__popup {
+    background-color: #fff;
+  }
+
+  .component {
+    background-color: #fff;
+    width: 90%;
+  }
+
+  .content_card {
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  .Header__card {
+    color: #a70da4;
+    font-weight: bold;
+  }
+
+  .content_card2 {
+    color: rgb(78, 150, 196);
+    text-decoration: underline;
+  }

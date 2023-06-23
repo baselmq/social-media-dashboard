@@ -5,8 +5,18 @@ import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
 import Buttons from "../btn/Buttons";
 import { PathIcons } from "../../util/PathIcons";
+import Friends from "../friend_card/Friends";
+import { useState } from "react";
+
 const CoverProfile = () => {
   const data = userData[0];
+  
+  const [showPopup, setShowPopup] = useState(false);
+  
+  
+  const handleOpenFriend = () => {
+    setShowPopup(true);
+  };
   return (
     <div className="container_profile">
       <img className="cover_profile" src={coverImage} alt="cover" />
@@ -21,7 +31,7 @@ const CoverProfile = () => {
         <div className="btn_cover pt-2">
           <div
             className="fs-6 friends-profile"
-            onClick={openFriend}
+            onClick={handleOpenFriend}
           >{`${250} friends`}</div>
           <div className="d-flex gap-3">
             <Buttons
@@ -43,5 +53,4 @@ const CoverProfile = () => {
 function click() {
   console.log(1);
 }
-function openFriend() {}
 export default CoverProfile;
