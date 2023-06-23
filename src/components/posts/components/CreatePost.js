@@ -36,7 +36,7 @@ const CreatePost = (props) => {
         style={{
           backgroundColor: !postContent.trim() ? "#BCBCBC" : "#a303a0",
         }}
-        className="btn_create_post "
+        className="btn_create_post mt-3 "
         disabled={!postContent.trim()}
         onClick={handlePostSubmit}
       >

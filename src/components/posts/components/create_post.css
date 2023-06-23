@@ -24,3 +24,7 @@
   background-color: #e4e6eb;
   border-radius: 8px;
 }
+.display__upload{
+  width: 100%;
+  height: 300px;
+}
