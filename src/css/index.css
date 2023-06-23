@@ -6,7 +6,9 @@
 @import "../components/posts/card_post.css";
 @import "../components/posts/add_post.css";
 @import "./profile.css";
+@import "../components/popup/popup_friends.css";
 @import "../components/popup/popup.css";
+@import "../components/posts/components/create_post.css";
 :root {
   /* Light mode colors */
   --background-color: #ffffff;

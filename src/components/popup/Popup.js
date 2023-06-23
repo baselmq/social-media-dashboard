@@ -1,15 +1,20 @@
 import React from "react";
-import "../../css/index.css";
 import { PathIcons } from "../../util/PathIcons";
+
 const Popup = (props) => {
   return props.trigger ? (
     <div className="popup">
       <div className="popup-inner">
-        <span className="close-btn" onClick={() => props.setTrigger(false)}>
-          {PathIcons.close}
-        </span>
-       <span className="fs-3 mt-5 ms-5 ps-4">{props.title}</span>
-        <div className="popup-content">
+        <div className="header_popup d-flex justify-content-between pb-3">
+          <span className="fs-5 d-flex align-items-center">{props.title}</span>
+          <button
+            className="btn-close btn__close"
+            onClick={() => props.setTrigger(false)}
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div className="pt-3">
           <div>{props.children}</div>
         </div>
       </div>

@@ -2,12 +2,10 @@
   background-color: #fff;
   padding: 20px 10px;
   border-radius: 10px;
-
 }
-.header_add_post{
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e9e9e9;
-
+.header_add_post {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e9e9e9;
 }
 .btn-add_post {
   background-color: #f7f7f8;
@@ -19,4 +17,7 @@
   background-color: #e2e2e2;
   cursor: pointer;
   transition-duration: 0.5s;
+}
+.add_photo:hover {
+  cursor: pointer;
 }

@@ -26,7 +26,7 @@ export class PathIcons {
   static feeling = (<i className="fi fi-rr-grin-alt" style={iconPost}></i>);
   static close = (
     <i
-      class="fa-solid fa-circle-xmark"
+    className="fa-solid fa-circle-xmark"
       style={{ color: "red", fontSize: "35px" }}
     ></i>
   );

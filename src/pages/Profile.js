@@ -6,13 +6,13 @@ import CardPost from "../components/posts/CardPost";
 import CardActive from "../components/cards/CardActive";
 import CardMightKnow from "../components/cards/CardMightKnow";
 import AddPost from "../components/posts/AddPost";
+import AddPost1 from "../components/AddPost";
 import Friends from "../components/friend_card/Friends";
 
 const Profile = () => {
-
   return (
     <div className="bodyAllPages">
-      <div className="">
+      <div className="px-lg-4 mx-lg-3">
         <NavBar />
         <CoverProfile />
       </div>
@@ -29,6 +29,7 @@ const Profile = () => {
         <div className="col-xl-5 col-lg-7 col-md-8 ">
           <div className="d-flex flex-column gap-3">
             <AddPost />
+            <AddPost1 />
             <CardPost />
           </div>
         </div>

@@ -13,26 +13,24 @@
 .popup-inner {
   position: relative;
   width: 100%;
-  max-width: 75rem;
+  max-width: 33rem;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   max-height: 700px;
   padding: 25px;
 }
-.popup-inner .close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+.header_popup {
+  border-bottom: 1px solid #d4d4d4;
 }
 .popup-inner .close-btn:hover {
   cursor: pointer;
 }
-.popup-content {
-  width: 100%;
-  border-radius: 20px;
-  max-height: 550px;
-  overflow: hidden;
-  overflow-y: scroll;
-  margin-top: 10px;
-  
+
+.custom_btn_close {
+  background-color: #e4e6eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50%;
 }

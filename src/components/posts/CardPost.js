@@ -30,7 +30,7 @@ const CardPost = () => {
         <div className="footer_post">
           <div className="d-flex gap-4">
             <div className="like-post d-flex align-items-center gap-2">
-              {PathIcons.unlike}
+              {PathIcons.like}
               {` ${150}K`}
             </div>
             <div className="comment-post d-flex align-items-center gap-2">

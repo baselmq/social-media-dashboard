@@ -11,6 +11,7 @@ const userData = [
     email: "charles5182@ummoh.com",
     phone: "33757005467",
     statusLogin: true,
+    statusOnline:"online",
     friends: [{ fullName: "John Doe", email: "johndoe@example.com" }],
     friendsRequest: [{ fullName: "Jane Smith", email: "janesmith@example.com" }],
     post: [

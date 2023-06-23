@@ -7,7 +7,7 @@ import Buttons from "../btn/Buttons";
 import { PathIcons } from "../../util/PathIcons";
 import Friends from "../friend_card/Friends";
 import { useState } from "react";
-import Popup from "../popup/Popup";
+import PopupFriends from "../popup/PopupFriends";
 
 const CoverProfile = () => {
   const data = userData[0];
@@ -33,13 +33,13 @@ const CoverProfile = () => {
               onClick={() => setButtonPopup(true)}
             >{`${250} friends`}</div>
             {/* Popup */}
-            <Popup
+            <PopupFriends
               trigger={buttonPopup}
               setTrigger={setButtonPopup}
               title={"Friends"}
             >
               <Friends />
-            </Popup>
+            </PopupFriends>
             <div className="d-flex gap-3">
               <Buttons
                 text={"message"}
