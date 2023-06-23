@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/navbar/NavBar";
 import CoverProfile from "../components/cover/CoverProfile";
 import CardAbout from "../components/cards/CardAbout";
@@ -9,6 +9,7 @@ import AddPost from "../components/posts/AddPost";
 import Friends from "../components/friend_card/Friends";
 
 const Profile = () => {
+
   return (
     <div className="bodyAllPages">
       <div className="">

@@ -1,70 +1,20 @@
 import React from "react";
 import "./card_friend.css";
-import userData from "../../data/data"; 
+import userData from "../../data/data";
+import ImageUser from "../cache_image/ImageUser";
+import { PathIcons } from "../../util/PathIcons";
 const CardFriend = () => {
   return (
-    <div class="row mt-4 d-flex justify-content-center">
-  <div className="component rounded border_style">
-    <div className="row d-flex m-4">
-      <div className="Header__card">Friends</div>
+    <div className="card_friend col-lg-5 p-4">
+      <div className=" d-flex align-items-center gap-3">
+        <ImageUser image={userData[0].image} width={80} radius={"20%"} />
+        <div>
+          <span className="d-block">{`${userData[0].firstName} ${userData[0].lastName}`}</span>
+          <span className="d-block mutual-text">{45} mutual friends</span>
+        </div>
+      </div>
+      <span className="icon_dots_card_friend">{PathIcons.menuDots}</span>
     </div>
-    {/* from here card  */}
-    <div className="row d-flex justify-content-center gap-4 mt-3 ">
-    <div className="col-md-5 border rounded p-3 pt-2 pb-2 col_card">
-        <div className="row d-flex align-items-center">
-
-          <div className="col-2 p-0 " style={{ maxWidth: "100%", height: "55px" }}>
-            <img src={userData[0].image} style={{ width: "100%", height: "55px", objectFit: "cover" }} className="rounded"></img>
-          </div>
-
-          <div className="col-5 d-flex justify-content-center flex-column">
-            <p className="d-flex align-items-center m-0 content_card">name</p>
-            <p className="d-flex align-items-center m-0 content_card2">10 mutual friends</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-5 border rounded p-3 pt-2 pb-2 col_card">
-        <div className="row d-flex align-items-center">
-
-          <div className="col-2 p-0 " style={{ maxWidth: "100%", height: "55px" }}>
-            <img src={userData[0].image} style={{ width: "100%", height: "55px", objectFit: "cover" }} className="rounded"></img>
-          </div>
-
-          <div className="col-5 d-flex justify-content-center flex-column">
-            <p className="d-flex align-items-center m-0 content_card">name</p>
-            <p className="d-flex align-items-center m-0 content_card2">10 mutual friends</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-5 border rounded p-3 pt-2 pb-2 col_card">
-        <div className="row d-flex align-items-center">
-
-          <div className="col-2 p-0 " style={{ maxWidth: "100%", height: "55px" }}>
-            <img src={userData[0].image} style={{ width: "100%", height: "55px", objectFit: "cover" }} className="rounded"></img>
-          </div>
-
-          <div className="col-5 d-flex justify-content-center flex-column">
-            <p className="d-flex align-items-center m-0 content_card">name</p>
-            <p className="d-flex align-items-center m-0 content_card2">10 mutual friends</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-5 border rounded p-3 pt-2 pb-2 col_card">
-        <div className="row d-flex align-items-center">
-
-          <div className="col-2 p-0 " style={{ maxWidth: "100%", height: "55px" }}>
-            <img src={userData[0].image} style={{ width: "100%", height: "55px", objectFit: "cover" }} className="rounded"></img>
-          </div>
-
-          <div className="col-5 d-flex justify-content-center flex-column">
-            <p className="d-flex align-items-center m-0 content_card">name</p>
-            <p className="d-flex align-items-center m-0 content_card2">10 mutual friends</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
   );
 };
 

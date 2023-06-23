@@ -1,4 +1,4 @@
-.component__popup {
+/* .component__popup {
     background-color: #fff;
   }
 
@@ -20,12 +20,28 @@
   .content_card2 {
     color: rgb(78, 150, 196);
     text-decoration: underline;
-  }
+  } */
 
-  @media (max-width: 767px) {
-    /* Styles for screens smaller than 768px */
+/* @media (max-width: 767px) {
     .col-md-5 {
       width: 100%;
     }
-  }
+  } */
 
+.card_friend {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  position: relative;
+}
+.mutual-text {
+  font-size: 12px;
+}
+.icon_dots_card_friend {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+}
+.icon_dots_card_friend:hover {
+  cursor: pointer;
+}

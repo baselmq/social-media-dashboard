@@ -24,6 +24,12 @@ export class PathIcons {
 
   static image = (<i className="fi fi-rr-images" style={iconPost}></i>);
   static feeling = (<i className="fi fi-rr-grin-alt" style={iconPost}></i>);
+  static close = (
+    <i
+      class="fa-solid fa-circle-xmark"
+      style={{ color: "red", fontSize: "35px" }}
+    ></i>
+  );
   // static user = (<i className={`fa-solid fa-user`} style={iconPost}></i>);
   // static birthrate = (
   //   <i className={`fa-solid fa-cake-candles`} style={iconPost}></i>

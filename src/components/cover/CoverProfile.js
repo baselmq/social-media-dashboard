@@ -7,18 +7,17 @@ import Buttons from "../btn/Buttons";
 import { PathIcons } from "../../util/PathIcons";
 import Friends from "../friend_card/Friends";
 import { useState } from "react";
+import Popup from "../popup/Popup";
 
 const CoverProfile = () => {
   const data = userData[0];
-
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleOpenFriend = () => {
-    setShowPopup(true);
-  };
+  const [buttonPopup, setButtonPopup] = useState(false);
+  buttonPopup
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "auto");
   return (
-    <div className="row d-flex justify-content-center">
-      <div className="col-xl-11 col-lg-11 col-md-9 container_profile">
+    <div className="">
+      <div className="container_profile">
         <img className="cover_profile" src={coverImage} alt="cover" />
         <ImageUser
           image={data.image}
@@ -31,8 +30,16 @@ const CoverProfile = () => {
           <div className="btn_cover pt-2">
             <div
               className="fs-6 friends-profile"
-              onClick={handleOpenFriend}
+              onClick={() => setButtonPopup(true)}
             >{`${250} friends`}</div>
+            {/* Popup */}
+            <Popup
+              trigger={buttonPopup}
+              setTrigger={setButtonPopup}
+              title={"Friends"}
+            >
+              <Friends />
+            </Popup>
             <div className="d-flex gap-3">
               <Buttons
                 text={"message"}

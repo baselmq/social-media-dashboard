@@ -1,16 +1,16 @@
 import React from "react";
 
-const ImageUser = (props) => {
+const ImageUser = ({ radius = "50%", width, classImage, image, name }) => {
   let imageStyle = {
-    width: `${props.width}px`,
-    height: `${props.width}px`,
-    borderRadius: " 50%",
+    width: `${width}px`,
+    height: `${width}px`,
+    borderRadius: radius,
     objectFit: "cover",
     // objectPosition: "100% 0",
   };
   return (
-    <div className={props.classImage}>
-      <img src={props.image} alt={props.name} style={imageStyle} />
+    <div className={classImage}>
+      <img src={image} alt={name} style={imageStyle} />
     </div>
   );
 };
