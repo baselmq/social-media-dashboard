@@ -159,7 +159,7 @@ const AddPost = () => {
                         <img
                           key={index}
                           src={fileURL}
-                          alt="Uploaded Image"
+                          alt="UploadedImage"
                           className="display__upload"
                         />
                       );

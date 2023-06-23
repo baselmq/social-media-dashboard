@@ -18,6 +18,7 @@ const menuNav = {
 };
 export class PathIcons {
   static addFriend = (<i className="fa-solid fa-user-plus" style={style}></i>);
+  static search = (<i class="fa-solid fa-magnifying-glass" style={iconPost}></i>);
   static messenger = (
     <i className="fa-brands fa-facebook-messenger" style={style}></i>
   );
