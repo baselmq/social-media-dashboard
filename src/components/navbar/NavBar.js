@@ -7,6 +7,8 @@ import { SearchResultList } from "./SearchResultList";
 import ImageUser from "../cache_image/ImageUser";
 import userData from "../../data/data";
 import { Link } from "react-router-dom";
+import DropdownMenu from "./DropdownMenu";
+import { PathIcons } from "../../util/PathIcons";
 const NavBar = () => {
   const [results, setResults] = useState([]);
 
@@ -51,14 +53,32 @@ const NavBar = () => {
               {results && results.length > 0 && (
                 <SearchResultList results={results} />
               )}
+              {}
             </div>
           </form>
           <span className="mx-3">{userData[0].name}</span>
-          <ImageUser
-            image={userData[0].image}
-            name={userData[0].name}
-            width={40}
-          />
+
+          <div className="dropdown">
+            <button
+              className="btn_dropdown"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <ImageUser
+                image={userData[0].image}
+                name={userData[0].name}
+                width={40}
+              />
+            </button>
+            <ul className="dropdown-menu dropdown-menu-end custom-dropdown-menu pt-3">
+              <DropdownMenu text={userData[0].firstName} to={"/profile"} image={userData[0].image} />
+              <DropdownMenu text={"Setting"} to={"/"} icon={PathIcons.settings} />
+              <DropdownMenu text={"Language"} to={"/"} icon={PathIcons.language} />
+              <DropdownMenu text={"Display"} to={"/"} icon={PathIcons.darkMode} />
+              <DropdownMenu text={"Sign Out"} to={"/"} icon={PathIcons.signOut} />
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

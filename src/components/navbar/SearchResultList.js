@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import ImageUser from "../cache_image/ImageUser";
 export const SearchResultList = ({ results }) => {
   return (
-    <div className="results-list">
+    <div className="results-list p-2">
       {results.map((result, id) => {
         return (
           <Link
-            className="m-2"
+            className="m-2 text-decoration-none"
             to={`/details?id=${encodeURIComponent(result.idClub - 1)}`}
             key={id}
           >

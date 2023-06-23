@@ -12,7 +12,7 @@ const Posts = () => {
         <div className="body__post p-4">
           <div className="first__Div mt-1">
             <div className="right">
-              <img src={userData[0].image} className="Imag_avatar" />
+              <img src={userData[0].image} className="Image_avatar" />
               <div>
                 <div className="usernamePtime">username</div>
                 <div className="usernamePtime">15 mints</div>

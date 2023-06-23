@@ -1,6 +1,5 @@
 .custom_nav {
   background-color: #f7f7f8;
-
 }
 
 .input_wrapper {
@@ -33,4 +32,27 @@
 }
 .custom_active {
   border-bottom: 2.5px solid #a303a0;
+}
+.dropdown__custom:is(:hover, :active, :focus) {
+  background-color: transparent;
+  border: none;
+}
+.btn_dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: transparent;
+  border: none !important;
+}
+.btn_dropdown:is(:hover, :active, :focus) {
+  background-color: transparent !important;
+  border: none;
+}
+.custom-dropdown-menu {
+  width: 300px;
+}
+.custom_item_dropDown:focus {
+  background-color: #a303a024 !important;
 }

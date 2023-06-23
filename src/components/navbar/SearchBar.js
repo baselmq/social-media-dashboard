@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import userData from "../../data/data";
 
 export const SearchBar = ({ setResults }) => {
@@ -10,13 +10,11 @@ export const SearchBar = ({ setResults }) => {
     let updatedList = userData.filter((item) => {
       return item.firstName.toLowerCase().includes(query.toLowerCase());
     });
-    setResults(updatedList);
-    setInput(updatedList);
+    // setResults(updatedList);
+    query.trim() === "" ? setResults("") : setResults(updatedList);
+    query.trim() === "" ? setInput("") : setInput(updatedList);
   };
-  const sizeIcon = {
-    width: "20px",
-    height: "20px",
-  };
+  useEffect(() => {}, [input]);
   return (
     <div className="input_wrapper">
       {/* <img style={sizeIcon} src={searchIcon} alt="" /> */}

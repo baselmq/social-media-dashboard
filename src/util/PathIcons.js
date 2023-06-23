@@ -7,6 +7,15 @@ const iconPost = {
   color: "#a303a0",
   fontSize: "20px",
 };
+const menuNav = {
+  color: "#a303a0",
+  fontSize: "20px",
+  backgroundColor: "#f7f7f8",
+  display: "flex",
+  alignItems: "center",
+  padding: "5px",
+  borderRadius: "50%",
+};
 export class PathIcons {
   static addFriend = (<i className="fa-solid fa-user-plus" style={style}></i>);
   static messenger = (
@@ -24,7 +33,13 @@ export class PathIcons {
 
   static image = (<i className="fi fi-rr-images" style={iconPost}></i>);
   static feeling = (<i className="fi fi-rr-grin-alt" style={iconPost}></i>);
-  static upload = (<i class="fa-solid fa-cloud-arrow-up" style={iconPost}></i>);
+  static upload = (
+    <i className="fa-solid fa-cloud-arrow-up" style={iconPost}></i>
+  );
+  static settings = (<i className="fi fi-sr-settings" style={menuNav}></i>);
+  static language = (<i className="fi fi-rr-language" style={menuNav}></i>);
+  static darkMode = (<i className="fa-solid fa-moon" style={menuNav}></i>);
+  static signOut = (<i className="fi fi-br-sign-out-alt" style={menuNav}></i>);
   static close = (
     <i
       className="fa-solid fa-circle-xmark"
