@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../css/index.css";
 // import "bootstrap/dist/js/bootstrap.js";
@@ -9,9 +9,12 @@ import userData from "../../data/data";
 import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import { PathIcons } from "../../util/PathIcons";
+import EditProfileNew from "../edit_profile/EditProfileNew";
+import PopupEditProfile from "../popup/PopupEditProfile";
 const NavBar = () => {
   const [results, setResults] = useState([]);
-
+  const [value, setValue] = useState("");
+  const [settingPopup, setSettingPopup] = useState(false);
   return (
     <nav className="navbar navbar-expand-sm custom_nav">
       <div className="container-fluid">
@@ -19,7 +22,7 @@ const NavBar = () => {
           Brand
         </Link>
         <ul className="navbar-nav custom-items">
-          <li className="nav-item custom_item_nav custom_active d-flex justify-content-center">
+          <li className="nav-item custom_item_nav custom_active  d-flex justify-content-center">
             <Link className="nav-link " to="/">
               <i className="fa-solid fa-house"></i>
             </Link>
@@ -30,9 +33,19 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="nav-item custom_item_nav d-flex justify-content-center">
-            <Link className="nav-link" to="/">
+            <Link
+              className="nav-link"
+              to="/"
+              onClick={() => setSettingPopup(true)}
+            >
               <i className="fa-sharp fa-solid fa-gear"></i>
             </Link>
+            <PopupEditProfile
+              trigger={settingPopup}
+              setTrigger={setSettingPopup}
+            >
+              <EditProfileNew />
+            </PopupEditProfile>
           </li>
         </ul>
         {/* <button
@@ -52,9 +65,13 @@ const NavBar = () => {
         >
           <form className="search_bar_nav" role="search">
             <div className="">
-              <SearchBar setResults={setResults} />
+              <SearchBar setResults={setResults} value={value} />
               {results && results.length > 0 && (
-                <SearchResultList results={results} setResult={setResults}/>
+                <SearchResultList
+                  results={results}
+                  setResult={setResults}
+                  setValue={setValue}
+                />
               )}
               {}
             </div>
@@ -84,7 +101,15 @@ const NavBar = () => {
                 text={"Setting"}
                 to={"/"}
                 icon={PathIcons.settings}
+                onPress={() => setSettingPopup(true)}
               />
+              <PopupEditProfile
+                trigger={settingPopup}
+                setTrigger={setSettingPopup}
+                title={"Setting"}
+              >
+                <EditProfileNew />
+              </PopupEditProfile>
               <DropdownMenu
                 text={"Language"}
                 to={"/"}

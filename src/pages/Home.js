@@ -2,6 +2,8 @@ import { useLocation } from "react-router-dom";
 import NavBar from "../components/navbar/NavBar";
 import AddPost from "../components/posts/AddPost";
 import CardPost from "../components/posts/CardPost";
+import EditProfile from "../components/edit_profile/Editprofile";
+import userData from "../data/data";
 
 const Home = () => {
   const location = useLocation();
@@ -19,6 +21,7 @@ const Home = () => {
             <div className="d-flex flex-column gap-3">
               <AddPost id={index} />
               <CardPost id={index} />
+              {/* <EditProfile userData={userData} index={0} /> */}
             </div>
           </div>
         </div>

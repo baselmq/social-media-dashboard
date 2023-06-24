@@ -39,7 +39,7 @@ export class PathIcons {
   static upload = (
     <i className="fa-solid fa-cloud-arrow-up" style={iconPost}></i>
   );
-  static settings = (<i className="fi fi-sr-settings" style={menuNav}></i>);
+  static settings = (<i className="fa-solid fa-gear" style={menuNav}></i>);
   static language = (<i className="fi fi-rr-language" style={menuNav}></i>);
   static darkMode = (<i className="fa-solid fa-moon" style={menuNav}></i>);
   static signOut = (<i className="fi fi-br-sign-out-alt" style={menuNav}></i>);

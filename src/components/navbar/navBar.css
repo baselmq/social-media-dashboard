@@ -47,3 +47,6 @@
   position: absolute;
   right: 70px;
 }
+.active {
+  color: #a303a0;
+}
