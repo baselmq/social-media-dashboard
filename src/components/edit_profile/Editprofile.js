@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./edit_profile.css";
+import "./Cover.css"
+
 export default function EditProfile({ userData, index }) {
-  const [showInitialPopup, setShowInitialPopup] = useState(true);
+  const [showInitialPopup, setShowInitialPopup] = useState(false);
   const [showSettingPopup, setShowSettingPopup] = useState(false);
   const [selectedSetting, setSelectedSetting] = useState(null);
   const [firstName, setFirstName] = useState(userData[index].firstName);
@@ -10,6 +11,10 @@ export default function EditProfile({ userData, index }) {
   const [location, setLocation] = useState(userData[index].location);
   const [email, setEmail] = useState(userData[index].email);
   const [phone, setPhone] = useState(userData[index].phone);
+
+  const openInitialPopup = () => {
+    setShowInitialPopup(true);
+  };
 
   const closeInitialPopup = () => {
     setShowInitialPopup(false);
@@ -23,19 +28,18 @@ export default function EditProfile({ userData, index }) {
     if (setting === "Phone") {
       setPhone(userData[index].phone); // Set initial phone value
     }
-    setShowInitialPopup(false);
     setShowSettingPopup(true);
   };
 
   const closeSettingPopup = () => {
     setSelectedSetting(null);
-    setShowInitialPopup(true);
     setShowSettingPopup(false);
     setUploadedImage(null);
   };
 
   useEffect(() => {
-    setShowInitialPopup(true);
+    setShowInitialPopup(false);
+    setShowSettingPopup(false);
   }, []);
 
   const handleDivClick = () => {
@@ -71,7 +75,8 @@ export default function EditProfile({ userData, index }) {
 
   return (
     <div>
-      <h1>4444dddd</h1>
+      <button onClick={openInitialPopup}>click</button>
+
       {showInitialPopup && (
         <div className="popup">
           <div className="popup-content">
@@ -117,6 +122,11 @@ export default function EditProfile({ userData, index }) {
               >
                 Phone
               </div>
+              <div className="popup-button-container">
+              <button onClick={handleSaveChanges} className="button">
+                SUBMIT
+              </button>
+            </div>
             </div>
           </div>
         </div>
@@ -177,7 +187,7 @@ export default function EditProfile({ userData, index }) {
                   ) : (
                     <img
                       src={userData[index].image}
-                      alt="Profile"
+                      alt="Profile Picture"
                       className="image-profile"
                     />
                   )}
@@ -233,9 +243,11 @@ export default function EditProfile({ userData, index }) {
               </div>
             )}
 
-            <button onClick={handleSaveChanges} className="button">
-              SUBMIT
-            </button>
+            <div className="popup-button-container">
+              <button onClick={handleSaveChanges} className="button">
+                SUBMIT
+              </button>
+            </div>
           </div>
         </div>
       )}
