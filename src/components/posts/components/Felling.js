@@ -30,6 +30,10 @@ const Felling = () => {
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
   };
+  
+  const handleItemClick = (name) => {
+    setFilter(name);
+  };
 
   const filteredFeelings = feelings.filter((feeling) =>
     feeling.name.toLowerCase().includes(filter.toLowerCase())
@@ -37,32 +41,50 @@ const Felling = () => {
 
   return (
     <div>
-      {/* search stack */}
-      <div className="row sticky-top">
-      <div className="border rounded-5 p-2 d-flex align-items-center gap-3">{PathIcons.search}<input
+    <div className="row sticky-top">
+      <div className="border rounded-5 p-2 d-flex align-items-center gap-3">
+        {PathIcons.search}
+        <input
           type="text"
           placeholder="search"
           className=""
           value={filter}
           onChange={handleFilterChange}
-        /></div>
-        
+        />
       </div>
-      {/* feelings */}
-      <div className="row">
-        <div className="col-md-12">
-          <div className="scrollable-container" style={{ maxHeight: "300px", overflowY: "auto" }}>
-            <div className="row d-flex justify-content-between mt-3">
-              {filteredFeelings.map((feeling, index) => (
-                <div key={index} className="col-md-6 p-2 mt-2">
-                  {feeling.emoji} {feeling.name}
-                </div>
-              ))}
-            </div>
+    </div>
+    {/* feelings */}
+    <div className="row">
+      <div className="col-md-12">
+        <div
+          className="scrollable-container"
+          style={{ maxHeight: "300px", overflowY: "auto" }}
+        >
+          <div className="row d-flex justify-content-between mt-3">
+            {filteredFeelings.map((feeling, index) => (
+              <div
+                key={index}
+                className="col-md-6 p-2 mt-2 rounded-5"
+                style={{
+                  backgroundColor: "white",
+                  transition: "background-color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "lightgray";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "white";
+                }}
+                onClick={() => handleItemClick(feeling.name)}
+              >
+                {feeling.emoji} {feeling.name}
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
