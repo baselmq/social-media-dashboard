@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { PathIcons } from "../../../util/PathIcons";
+import Popup from "../../popup/Popup";
+import CreatePost from "./CreatePost";
+
 const Felling = () => {
   const feelings = [
     { name: "happy", emoji: "😊" },
@@ -26,13 +29,19 @@ const Felling = () => {
   ];
 
   const [filter, setFilter] = useState("");
+  const [selectedFeeling, setSelectedFeeling] = useState("");
+  const [selectedFeelingEmoji, setSelectedFeelingEmoji] = useState("");
+  const [showFeelings, setShowFeelings] = useState(true);
 
   const handleFilterChange = (e) => {
     setFilter(e.target.value);
   };
 
-  const handleItemClick = (name) => {
+  const handleItemClick = (name, emoji) => {
     setFilter(name);
+    setSelectedFeeling(name);
+    setSelectedFeelingEmoji(emoji);
+    setShowFeelings(false); // Hide the feelings section
   };
 
   const filteredFeelings = feelings.filter((feeling) =>
@@ -42,47 +51,49 @@ const Felling = () => {
   return (
     <div>
       <div className="row sticky-top">
-        <div className="border rounded-5 p-2 ps-3 d-flex align-items-center gap-2">
-          {PathIcons.search}
-          <input
-            type="text"
-            placeholder="search"
-            className="search_felling"
-            value={filter}
-            onChange={handleFilterChange}
-          />
-        </div>
+        {/* ... */}
       </div>
-      {/* feelings */}
-      <div className="row">
-        <div className="col-md-12">
-          <div className="scrollable-container">
-            <div className="row d-flex justify-content-between mt-3 ps-4">
-              {filteredFeelings.map((feeling, index) => (
-                <div
-                  key={index}
-                  className="col-md-5 p-2 mt-2 rounded-5"
-                  style={{
-                    backgroundColor: "white",
-                    transition: "background-color 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "#F0F0F0";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "white";
-                  }}
-                  onClick={() => handleItemClick(feeling.name)}
-                >
-                  {feeling.emoji} {feeling.name}
-                </div>
-              ))}
+    {/*   feelings */}
+      {showFeelings && (
+        <div className="row">
+          <div className="col-md-12">
+            <div className="scrollable-container">
+              <div className="row d-flex justify-content-between mt-3 ps-4">
+                {filteredFeelings.map((feeling, index) => (
+                  <div
+                    key={index}
+                    className="col-md-5 p-2 mt-2 rounded-5"
+                    style={{
+                      backgroundColor: "white",
+                      transition: "background-color 0.3s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = "#F0F0F0";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = "white";
+                    }}
+                    onClick={() => handleItemClick(feeling.name, feeling.emoji)}
+                  >
+                    {feeling.emoji} {feeling.name}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
+      {/* CreatePost component */}
+      {selectedFeeling && (
+        <CreatePost
+          text="Feeling "
+          selectedFeeling={selectedFeeling}
+          selectedFeelingEmoji={selectedFeelingEmoji}
+        />
+      )}
     </div>
   );
 };
 
 export default Felling;
+
