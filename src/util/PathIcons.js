@@ -18,7 +18,9 @@ const menuNav = {
 };
 export class PathIcons {
   static addFriend = (<i className="fa-solid fa-user-plus" style={style}></i>);
-  static search = (<i class="fa-solid fa-magnifying-glass" style={iconPost}></i>);
+  static search = (
+    <i className="fa-solid fa-magnifying-glass" style={iconPost}></i>
+  );
   static messenger = (
     <i className="fa-brands fa-facebook-messenger" style={style}></i>
   );
@@ -41,6 +43,7 @@ export class PathIcons {
   static language = (<i className="fi fi-rr-language" style={menuNav}></i>);
   static darkMode = (<i className="fa-solid fa-moon" style={menuNav}></i>);
   static signOut = (<i className="fi fi-br-sign-out-alt" style={menuNav}></i>);
+  static searchIcon = (<i className="fi fi-rr-search" style={iconPost}></i>);
   static close = (
     <i
       className="fa-solid fa-circle-xmark"

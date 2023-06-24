@@ -5,8 +5,8 @@ import userData from "../../data/data";
 import { PathIcons } from "../../util/PathIcons";
 import imageC from "../../assets/images/cover.jpg";
 import InputField from "../inputs/InputField";
-const CardPost = () => {
-  const data = userData[0];
+const CardPost = ({ id }) => {
+  const data = userData[id];
   return (
     <div className="row container_post">
       <div className="col-12 p-4">

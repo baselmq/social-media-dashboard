@@ -39,22 +39,31 @@ const Felling = () => {
     <div>
       {/* search stack */}
       <div className="row sticky-top">
-      <div className="border rounded-5 p-2 d-flex align-items-center gap-3">{PathIcons.search}<input
-          type="text"
-          placeholder="search"
-          className=""
-          value={filter}
-          onChange={handleFilterChange}
-        /></div>
-        
+        <div className="border rounded-5 p-2 ps-3 d-flex align-items-center gap-2">
+          {PathIcons.search}
+          <input
+            type="text"
+            placeholder="search"
+            className="search_felling"
+            value={filter}
+            onChange={handleFilterChange}
+          />
+        </div>
       </div>
       {/* feelings */}
       <div className="row">
         <div className="col-md-12">
-          <div className="scrollable-container" style={{ maxHeight: "300px", overflowY: "auto" }}>
-            <div className="row d-flex justify-content-between mt-3">
+          <div
+            className="scrollable-container"
+            style={{
+              maxHeight: "300px",
+              overflow: "hidden",
+              overflowY: "scroll",
+            }}
+          >
+            <div className="row d-flex justify-content-center mt-3">
               {filteredFeelings.map((feeling, index) => (
-                <div key={index} className="col-md-6 p-2 mt-2">
+                <div key={index} className="col-md-5 p-2 mt-2">
                   {feeling.emoji} {feeling.name}
                 </div>
               ))}

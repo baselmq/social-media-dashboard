@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import userData from "../../data/data";
+import { PathIcons } from "../../util/PathIcons";
 
 export const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
@@ -18,9 +19,9 @@ export const SearchBar = ({ setResults }) => {
   return (
     <div className="input_wrapper">
       {/* <img style={sizeIcon} src={searchIcon} alt="" /> */}
-      <i className="fi fi-rr-search"></i>
+      {PathIcons.search}
       <input
-        className=" me-2"
+        className="search_bar me-2"
         type="search"
         placeholder="Search"
         onChange={search}

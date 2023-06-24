@@ -6,8 +6,8 @@ import { PathIcons } from "../../util/PathIcons";
 import Popup from "../popup/Popup";
 import CreatePost from "./components/CreatePost";
 import Felling from "./components/Felling";
-function AddPost() {
-  const data = userData[0];
+function AddPost({ id }) {
+  const data = userData[id];
   const [buttonPopup, setButtonPopup] = useState(false);
   const [felling, setFelling] = useState(false);
   // buttonPopup

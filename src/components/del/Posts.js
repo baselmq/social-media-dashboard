@@ -1,6 +1,6 @@
 import React from "react";
 
-import userData from "../data/data";
+import userData from "../../data/data";
 import "../css/posts.css";
 
 import { FaEllipsisH, FaHeart, FaComment } from "react-icons/fa";

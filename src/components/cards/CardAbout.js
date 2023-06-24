@@ -2,8 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../css/index.css";
 import userData from "../../data/data";
-function CardAbout() {
-  const data = userData[0];
+function CardAbout({ id }) {
+  const data = userData[id];
   const styleItem = {
     borderBottom: "none",
   };

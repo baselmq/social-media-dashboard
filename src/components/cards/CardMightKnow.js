@@ -2,8 +2,8 @@ import React from "react";
 import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
 import "./CardActive.css";
-const CardMightKnow = () => {
-  const data = userData[0];
+const CardMightKnow = ({ id }) => {
+  const data = userData[id];
   const styleItem = {
     borderBottom: "none",
   };

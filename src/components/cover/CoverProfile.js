@@ -9,12 +9,13 @@ import Friends from "../friend_card/Friends";
 import { useState } from "react";
 import PopupFriends from "../popup/PopupFriends";
 
-const CoverProfile = () => {
-  const data = userData[0];
+const CoverProfile = ({id}) => {
+  const data = userData[id];
   const [buttonPopup, setButtonPopup] = useState(false);
   buttonPopup
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "auto");
+
   return (
     <div className="">
       <div className="container_profile">

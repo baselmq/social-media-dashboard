@@ -6,7 +6,7 @@ import { SearchBar } from "./SearchBar";
 import { SearchResultList } from "./SearchResultList";
 import ImageUser from "../cache_image/ImageUser";
 import userData from "../../data/data";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import { PathIcons } from "../../util/PathIcons";
 const NavBar = () => {
@@ -46,12 +46,15 @@ const NavBar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button> */}
-        <div className="d-flex justify-content-end align-items-center" id="">
-          <form className="" role="search">
+        <div
+          className="d-flex justify-content-end align-items-center container_right_nav"
+          id=""
+        >
+          <form className="search_bar_nav" role="search">
             <div className="">
               <SearchBar setResults={setResults} />
               {results && results.length > 0 && (
-                <SearchResultList results={results} />
+                <SearchResultList results={results} setResult={setResults}/>
               )}
               {}
             </div>
@@ -72,11 +75,31 @@ const NavBar = () => {
               />
             </button>
             <ul className="dropdown-menu dropdown-menu-end custom-dropdown-menu pt-3">
-              <DropdownMenu text={userData[0].firstName} to={"/profile"} image={userData[0].image} />
-              <DropdownMenu text={"Setting"} to={"/"} icon={PathIcons.settings} />
-              <DropdownMenu text={"Language"} to={"/"} icon={PathIcons.language} />
-              <DropdownMenu text={"Display"} to={"/"} icon={PathIcons.darkMode} />
-              <DropdownMenu text={"Sign Out"} to={"/"} icon={PathIcons.signOut} />
+              <DropdownMenu
+                text={userData[0].firstName}
+                to={"/profile"}
+                image={userData[0].image}
+              />
+              <DropdownMenu
+                text={"Setting"}
+                to={"/"}
+                icon={PathIcons.settings}
+              />
+              <DropdownMenu
+                text={"Language"}
+                to={"/"}
+                icon={PathIcons.language}
+              />
+              <DropdownMenu
+                text={"Display"}
+                to={"/"}
+                icon={PathIcons.darkMode}
+              />
+              <DropdownMenu
+                text={"Sign Out"}
+                to={"/"}
+                icon={PathIcons.signOut}
+              />
             </ul>
           </div>
         </div>
