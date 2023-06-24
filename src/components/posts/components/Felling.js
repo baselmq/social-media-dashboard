@@ -42,12 +42,12 @@ const Felling = () => {
   return (
     <div>
       <div className="row sticky-top">
-        <div className="border rounded-5 p-2 d-flex align-items-center gap-3">
+        <div className="border rounded-5 p-2 ps-3 d-flex align-items-center gap-2">
           {PathIcons.search}
           <input
             type="text"
             placeholder="search"
-            className=""
+            className="search_felling"
             value={filter}
             onChange={handleFilterChange}
           />
@@ -56,21 +56,18 @@ const Felling = () => {
       {/* feelings */}
       <div className="row">
         <div className="col-md-12">
-          <div
-            className="scrollable-container"
-            style={{ maxHeight: "300px", overflowY: "auto" }}
-          >
-            <div className="row d-flex justify-content-between mt-3">
+          <div className="scrollable-container">
+            <div className="row d-flex justify-content-between mt-3 ps-4">
               {filteredFeelings.map((feeling, index) => (
                 <div
                   key={index}
-                  className="col-md-6 p-2 mt-2 rounded-5"
+                  className="col-md-5 p-2 mt-2 rounded-5"
                   style={{
                     backgroundColor: "white",
                     transition: "background-color 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "lightgray";
+                    e.target.style.backgroundColor = "#F0F0F0";
                   }}
                   onMouseLeave={(e) => {
                     e.target.style.backgroundColor = "white";
