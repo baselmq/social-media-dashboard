@@ -4,6 +4,7 @@ import AddPost from "../components/posts/AddPost";
 import CardPost from "../components/posts/CardPost";
 import EditProfile from "../components/edit_profile/Editprofile";
 import userData from "../data/data";
+import Test from "./Test";
 
 const Home = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const Home = () => {
             <div className="d-flex flex-column gap-3">
               <AddPost id={index} />
               <CardPost id={index} />
+
               {/* <EditProfile userData={userData} index={0} /> */}
             </div>
           </div>
