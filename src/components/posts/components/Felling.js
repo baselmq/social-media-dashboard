@@ -50,9 +50,7 @@ const Felling = () => {
 
   return (
     <div>
-      <div className="row sticky-top">
-        {/* ... */}
-      </div>
+     
     {/*   feelings */}
       {showFeelings && (
         <div className="row">

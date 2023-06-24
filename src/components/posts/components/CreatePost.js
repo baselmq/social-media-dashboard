@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ImageUser from "../../cache_image/ImageUser";
 import userData from "../../../data/data";
 import "../../../css/index.css";
+
 import UploadFile from "./UploadFile";
 const CreatePost = (props) => {
   const [postContent, setPostContent] = useState("");
