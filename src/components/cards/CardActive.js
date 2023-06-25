@@ -2,14 +2,18 @@ import React from "react";
 import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
 import "./CardActive.css";
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../util/KeyLang";
 const CardActive = ({ id }) => {
+  const { t } = useTranslation();
+
   const data = userData[id];
   const styleItem = {
     borderBottom: "none",
   };
   return (
     <div className="card__active">
-      <h5 className="mb-3"> Active</h5>
+      <h5 className="mb-3">{t(KeyLang.active)}</h5>
       <ItemActive
         image={data.image}
         name={data.firstName}

@@ -2,7 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../css/index.css";
 import userData from "../../data/data";
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../util/KeyLang";
 function CardAbout({ id }) {
+  const { t } = useTranslation();
+
   const data = userData[id];
   const styleItem = {
     borderBottom: "none",
@@ -10,7 +14,7 @@ function CardAbout({ id }) {
 
   return (
     <div className="card__about">
-      <h5 className="mb-3">About</h5>
+      <h5 className="mb-3">{t(KeyLang.About)}</h5>
       <ItemAbout classIcon={"fa-user"} text={data.gender} />
       <ItemAbout
         classIcon={"fa-cake-candles"}

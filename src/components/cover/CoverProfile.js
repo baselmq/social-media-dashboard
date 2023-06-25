@@ -1,5 +1,4 @@
 import React from "react";
-import coverImage from "../../assets/images/cover.jpg";
 import "../../css/index.css";
 import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
@@ -8,10 +7,13 @@ import { PathIcons } from "../../util/PathIcons";
 import Friends from "../friend_card/Friends";
 import { useState } from "react";
 import PopupFriends from "../popup/PopupFriends";
-
-const CoverProfile = ({id}) => {
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../util/KeyLang";
+const CoverProfile = ({ id }) => {
   const data = userData[id];
   const [buttonPopup, setButtonPopup] = useState(false);
+  const { t } = useTranslation();
+
   buttonPopup
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "auto");
@@ -19,7 +21,7 @@ const CoverProfile = ({id}) => {
   return (
     <div className="">
       <div className="container_profile">
-        <img className="cover_profile" src={coverImage} alt="cover" />
+        <img className="cover_profile" src={data.imageCover} alt="cover" />
         <ImageUser
           image={data.image}
           name={data.name}
@@ -32,7 +34,7 @@ const CoverProfile = ({id}) => {
             <div
               className="fs-6 friends-profile"
               onClick={() => setButtonPopup(true)}
-            >{`${250} friends`}</div>
+            >{`${250} ${t(KeyLang.friend)}`}</div>
             {/* Popup */}
             <PopupFriends
               trigger={buttonPopup}
@@ -43,12 +45,12 @@ const CoverProfile = ({id}) => {
             </PopupFriends>
             <div className="d-flex gap-3">
               <Buttons
-                text={"message"}
+                text={t(KeyLang.message)}
                 onPress={click}
                 icon={PathIcons.messenger}
               />
               <Buttons
-                text={"add friend"}
+                text={t(KeyLang.addFriend)}
                 onPress={click}
                 icon={PathIcons.addFriend}
               />

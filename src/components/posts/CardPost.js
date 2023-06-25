@@ -3,7 +3,6 @@ import "../../css/index.css";
 import ImageUser from "../cache_image/ImageUser";
 import userData from "../../data/data";
 import { PathIcons } from "../../util/PathIcons";
-import imageC from "../../assets/images/cover.jpg";
 import InputField from "../inputs/InputField";
 const CardPost = ({ id }) => {
   const data = userData[id];
@@ -19,7 +18,7 @@ const CardPost = ({ id }) => {
           <span className="menu_dots_post">{PathIcons.menuDots}</span>
         </div>
         <div className="body_post py-4">
-          <img src={imageC} alt="image_post" />
+          <img src={data.imageCover} alt="image_post" />
           <p className="pt-3 mb-2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eum
             possimus voluptatibus a quod. Labore illum doloremque, quos ab

@@ -5,8 +5,8 @@
     "Setting":"Setting",
     "Display":"Display",
     "SignOut":"Sign Out",
-    "search_placholder":"Search",
-    "username,mind_your_on_WhatIs":",mind your on WhatIs",
+    "search_placeholder":"Search",
+    "mind_your_on_WhatIs":"mind your on WhatIs",
     "photo_video":"photo/video",
     "feeling_activity":"feeling/activity",
     "You_Might_Know":"You Might Know",
@@ -15,7 +15,7 @@
     "About":"About",
     "comment_placeholder":"add comment",
     "add_friend":"add friend",
-    "Meesage":"Message",
+    "Message":"Message",
     "friend":"Friend",
     "Upload_Video_or_photo":"Upload Video or photo",
     "Create_Post":"Create Post",
@@ -40,6 +40,8 @@
     "crying":"crying",
     "shocked":"shocked",
     "silly":"silly",
-    "content":"content"
+    "content":"content",
+    "add_comment":"add comment",
+    "feeling":"feeling"
 }
 

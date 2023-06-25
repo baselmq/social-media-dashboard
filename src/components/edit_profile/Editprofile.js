@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./Cover.css"
-
 export default function EditProfile({ userData, index }) {
   const [showInitialPopup, setShowInitialPopup] = useState(false);
   const [showSettingPopup, setShowSettingPopup] = useState(false);
@@ -123,10 +121,10 @@ export default function EditProfile({ userData, index }) {
                 Phone
               </div>
               <div className="popup-button-container">
-              <button onClick={handleSaveChanges} className="button">
-                SUBMIT
-              </button>
-            </div>
+                <button onClick={handleSaveChanges} className="button">
+                  SUBMIT
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -12,11 +12,16 @@ import { PathIcons } from "../../util/PathIcons";
 import EditProfileNew from "../edit_profile/EditProfileNew";
 import PopupEditProfile from "../popup/PopupEditProfile";
 import CustomLanguage from "../language/CustomLanguage";
+import Popup from "../popup/Popup";
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../util/KeyLang";
 const NavBar = () => {
   const [results, setResults] = useState([]);
   const [value, setValue] = useState("");
   const [settingPopup, setSettingPopup] = useState(false);
   const [langPopup, setLangPopup] = useState(false);
+  const { t } = useTranslation();
+
   return (
     <>
       <nav className="navbar navbar-expand-sm custom_nav">
@@ -104,7 +109,7 @@ const NavBar = () => {
                 />
                 {/* ***----------------- DropdownMenu Setting -----------------*** */}
                 <DropdownMenu
-                  text={"Setting"}
+                  text={t(KeyLang.setting)}
                   links={false}
                   icon={PathIcons.settings}
                   onPress={() => setSettingPopup(true)}
@@ -112,7 +117,7 @@ const NavBar = () => {
                 <PopupEditProfile
                   trigger={settingPopup}
                   setTrigger={setSettingPopup}
-                  title={"Setting"}
+                  title={t(KeyLang.setting)}
                 >
                   <EditProfileNew />
                 </PopupEditProfile>
@@ -120,7 +125,7 @@ const NavBar = () => {
                 {/* ***----------------- DropdownMenu Language -----------------*** */}
 
                 <DropdownMenu
-                  text={"Language"}
+                  text={t(KeyLang.language)}
                   links={false}
                   icon={PathIcons.language}
                   onPress={() => setLangPopup(true)}
@@ -128,13 +133,13 @@ const NavBar = () => {
 
                 {/* ***----------------- DropdownMenu Display -----------------*** */}
                 <DropdownMenu
-                  text={"Display"}
+                  text={t(KeyLang.display)}
                   links={false}
                   icon={PathIcons.darkMode}
                 />
                 {/* ***----------------- DropdownMenu Sign Out -----------------*** */}
                 <DropdownMenu
-                  text={"Sign Out"}
+                  text={t(KeyLang.SignOut)}
                   to={"/"}
                   icon={PathIcons.signOut}
                 />
@@ -143,13 +148,13 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-      <PopupEditProfile
+      <Popup
         trigger={langPopup}
         setTrigger={setLangPopup}
-        title={"Setting"}
+        title={t(KeyLang.language)}
       >
-        <CustomLanguage />
-      </PopupEditProfile>
+        <CustomLanguage setTrigger={setLangPopup} />
+      </Popup>
     </>
   );
 };

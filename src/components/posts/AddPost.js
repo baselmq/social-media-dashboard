@@ -6,10 +6,14 @@ import { PathIcons } from "../../util/PathIcons";
 import Popup from "../popup/Popup";
 import CreatePost from "./components/CreatePost";
 import Felling from "./components/Felling";
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../util/KeyLang";
 function AddPost({ id }) {
   const data = userData[id];
   const [buttonPopup, setButtonPopup] = useState(false);
   const [felling, setFelling] = useState(false);
+  const { t } = useTranslation();
+
   // buttonPopup
   //   ? (document.body.style.overflow = "hidden")
   //   : (document.body.style.overflow = "auto");
@@ -21,7 +25,7 @@ function AddPost({ id }) {
           className="btn-add_post d-flex align-items-center ps-3"
           onClick={() => setButtonPopup(true)}
         >
-          Basel? ,mind your on WhatIs
+          Basel? ,{t(KeyLang.mindYourOnWhatIs)}
         </div>
       </div>
       <div className="bottom_add_post d-flex justify-content-evenly mt-3">
@@ -29,26 +33,26 @@ function AddPost({ id }) {
           className="add_photo d-flex align-align-items-start gap-2"
           onClick={() => setButtonPopup(true)}
         >
-          {PathIcons.image} photo/video
+          {PathIcons.image} {t(KeyLang.photoVideo)}
         </div>
         <div
           className="feeling d-flex align-align-items-start gap-2"
           onClick={() => setFelling(true)}
         >
-          {PathIcons.feeling} feeling/activity
+          {PathIcons.feeling} {t(KeyLang.feelingActivity)}
         </div>
       </div>
       <Popup
         trigger={buttonPopup}
         setTrigger={setButtonPopup}
-        title={"Create Post"}
+        title={t(KeyLang.createPost)}
       >
         <CreatePost />
       </Popup>
       <Popup
         trigger={felling}
         setTrigger={setFelling}
-        title={"How are you feeling?"}
+        title={t(KeyLang.howAreYouFeeling)}
       >
         <Felling />
       </Popup>

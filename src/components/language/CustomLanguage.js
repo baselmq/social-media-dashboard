@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import cookies from "js-cookie";
@@ -36,34 +35,38 @@ const CustomLanguage = () => {
   return (
     <div className="row">
       {languages.map(({ code, name, country_code, flag }) => (
-        <div className="col-lg-5" key={country_code}>
-          <Link
-            href="/"
-            className={
-              ("dropdown-item",
-              {
-                disabled: currentLanguageCode === code,
-              })
-            }
-            onClick={() => {
-              i18next.changeLanguage(code);
-            }}
-          >
-            <span
-              style={{
-                opacity: currentLanguageCode === code ? 0.5 : 1,
-              }}
-            >
-              <img
-                src={flag}
-                alt=""
-                style={{ width: "25px", height: "25px" }}
-              />
-            </span>
-            {name}
-          </Link>
-        </div>
+        <CustomFlags
+          code={code}
+          name={name}
+          country_code={country_code}
+          flag={flag}
+          currentLangCode={currentLanguageCode}
+        />
       ))}
+    </div>
+  );
+};
+
+const CustomFlags = (props) => {
+  const styleImage = {
+    opacity: props.currentLangCode === props.code ? 0.5 : 1,
+  };
+  return (
+    <div className="col-lg-6" key={props.country_code}>
+      <div
+        className="box_lang d-flex flex-column align-items-center"
+        onClick={() => {
+          i18next.changeLanguage(props.code);
+        }}
+      >
+        <img
+          src={props.flag}
+          className="image_flag"
+          alt={props.name}
+          style={styleImage}
+        />
+        <span style={styleImage}>{props.name}</span>
+      </div>
     </div>
   );
 };
