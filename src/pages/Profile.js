@@ -7,12 +7,13 @@ import CardActive from "../components/cards/CardActive";
 import CardMightKnow from "../components/cards/CardMightKnow";
 import AddPost from "../components/posts/AddPost";
 import { useLocation } from "react-router-dom";
-
+import userData from "../data/data"; 
 const Profile = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get("id");
-
+let activeUser=localStorage.getItem("activeUser")
+let currentUser=userData.filter((item)=>{return item.email===activeUser})
   let index = id == null ? "0" : id;
   return (
     <div className="bodyAllPages">
@@ -33,9 +34,9 @@ const Profile = () => {
         <div className="col-xl-5 col-lg-7 col-md-8 ">
           <div className="d-flex flex-column gap-3">
             <AddPost id={index} />
-            <CardPost id={index} />
-            <CardPost id={index} />
-          </div>
+            <CardPost index={0} /> 
+            <CardPost index={0} />
+                      </div>
         </div>
         <div className="col-xl-3 d-xl-block d-lg-none d-md-none d-sm-none">
           <div className="d-flex flex-column gap-3">

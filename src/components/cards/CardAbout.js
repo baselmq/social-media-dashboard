@@ -2,8 +2,12 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../css/index.css";
 import userData from "../../data/data";
-function CardAbout({ id }) {
-  const data = userData[id];
+
+function CardAbout() {
+  const activeUser = localStorage.getItem("activeUser");
+
+  const currentUser = userData.find((user) => user.email === activeUser);
+
   const styleItem = {
     borderBottom: "none",
   };
@@ -11,17 +15,18 @@ function CardAbout({ id }) {
   return (
     <div className="card__about">
       <h5 className="mb-3">About</h5>
-      <ItemAbout classIcon={"fa-user"} text={data.gender} />
+      <ItemAbout classIcon={"fa-user"} text={currentUser.gender} />
       <ItemAbout
         classIcon={"fa-cake-candles"}
-        text={`Born ${data.birthDate}`}
+        text={`Born ${currentUser.birthDate}`}
       />
-      <ItemAbout classIcon={"fa-location-dot"} text={data.location} />
-      <ItemAbout classIcon={"fa-envelope"} text={data.email} />
-      <ItemAbout classIcon={"fa-phone"} text={data.phone} style={styleItem} />
+      <ItemAbout classIcon={"fa-location-dot"} text={currentUser.location} />
+      <ItemAbout classIcon={"fa-envelope"} text={currentUser.email} />
+      <ItemAbout classIcon={"fa-phone"} text={currentUser.phone} style={styleItem} />
     </div>
   );
 }
+
 function ItemAbout(props) {
   return (
     <div
@@ -33,4 +38,5 @@ function ItemAbout(props) {
     </div>
   );
 }
+
 export default CardAbout;

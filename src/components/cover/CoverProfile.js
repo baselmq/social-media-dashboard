@@ -9,9 +9,11 @@ import Friends from "../friend_card/Friends";
 import { useState } from "react";
 import PopupFriends from "../popup/PopupFriends";
 
-const CoverProfile = ({id}) => {
-  const data = userData[id];
+const CoverProfile = () => {
+  const activeUser = localStorage.getItem("activeUser");
+  const data = userData.find((user) => user.email === activeUser);
   const [buttonPopup, setButtonPopup] = useState(false);
+
   buttonPopup
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "auto");
@@ -19,10 +21,10 @@ const CoverProfile = ({id}) => {
   return (
     <div className="">
       <div className="container_profile">
-        <img className="cover_profile" src={coverImage} alt="cover" />
+        <img className="cover_profile" src={data.imageCover} alt="cover" />
         <ImageUser
           image={data.image}
-          name={data.name}
+          name={`${data.firstName} ${data.lastName}`}
           classImage={"image_profile"}
         />
         <div className="bottom_cover mt-4 px-5">
@@ -32,7 +34,7 @@ const CoverProfile = ({id}) => {
             <div
               className="fs-6 friends-profile"
               onClick={() => setButtonPopup(true)}
-            >{`${250} friends`}</div>
+            >{`${data.friends.length} friends`}</div>
             {/* Popup */}
             <PopupFriends
               trigger={buttonPopup}
@@ -59,7 +61,9 @@ const CoverProfile = ({id}) => {
     </div>
   );
 };
+
 function click() {
   console.log(1);
 }
+
 export default CoverProfile;

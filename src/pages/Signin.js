@@ -33,18 +33,18 @@ const Signin = () => {
 
   const handleLogin = () => {
    
-    if (signupData.mobileOrEmail !== loginInput && signupData.username !== loginInput) {
-      setError('Invalid login input.');
-      return;
-    }
+    // if (signupData.mobileOrEmail !== loginInput && signupData.username !== loginInput) {
+    //   setError('Invalid login input.');
+    //   return;
+    // }
 
     // Check if the entered password matches the stored password
     if (signupData.password !== password) {
       setError('Invalid password.');
       return;
     }
-
-  
+    localStorage.setItem("activeUser",loginInput)
+    window.location.href = '/profile';
     console.log('Logged in successfully!');
   };
 

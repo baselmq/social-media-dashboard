@@ -167,7 +167,7 @@ const Signup = () => {
           </div>
         </div>
         <div className='signup mt-3 d-flex justify-content-center'>
-          Have an account? <Link to='/' className=''> Log in</Link>
+          Have an account? <Link to='/Signin' className=''> Log in</Link>
         </div>
         <div className=' app mt-4  mb-4'>
           <div className='text-center'>
