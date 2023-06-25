@@ -7,21 +7,13 @@ import { PathIcons } from "../../util/PathIcons";
 import Friends from "../friend_card/Friends";
 import { useState } from "react";
 import PopupFriends from "../popup/PopupFriends";
-<<<<<<< HEAD
-
-const CoverProfile = () => {
-  const activeUser = localStorage.getItem("activeUser");
-  const data = userData.find((user) => user.email === activeUser);
-  const [buttonPopup, setButtonPopup] = useState(false);
-=======
 import { useTranslation } from "react-i18next";
 import { KeyLang } from "../../util/KeyLang";
 const CoverProfile = ({ id }) => {
-  const data = userData[id];
+  const activeUser = localStorage.getItem("activeUser");
+  const data = userData.find((user) => user.email === activeUser);
   const [buttonPopup, setButtonPopup] = useState(false);
   const { t } = useTranslation();
->>>>>>> 25fa6a4a84dd3a1e7a2c3fdf074ee133db5b41c3
-
   buttonPopup
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "auto");
@@ -42,11 +34,7 @@ const CoverProfile = ({ id }) => {
             <div
               className="fs-6 friends-profile"
               onClick={() => setButtonPopup(true)}
-<<<<<<< HEAD
-            >{`${data.friends.length} friends`}</div>
-=======
-            >{`${250} ${t(KeyLang.friend)}`}</div>
->>>>>>> 25fa6a4a84dd3a1e7a2c3fdf074ee133db5b41c3
+            >{`${data.friends.length} ${t(KeyLang.friend)}`}</div>
             {/* Popup */}
             <PopupFriends
               trigger={buttonPopup}
