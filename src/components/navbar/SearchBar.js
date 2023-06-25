@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import userData from "../../data/data";
 import { PathIcons } from "../../util/PathIcons";
 
-export const SearchBar = ({ setResults }) => {
+export const SearchBar = ({ setResults, value }) => {
   const [input, setInput] = useState("");
+  console.log();
 
   const search = (event) => {
     let query = event.target.value;
@@ -18,15 +19,18 @@ export const SearchBar = ({ setResults }) => {
   useEffect(() => {}, [input]);
   return (
     <div className="input_wrapper">
-      {/* <img style={sizeIcon} src={searchIcon} alt="" /> */}
       {PathIcons.search}
       <input
+        value={
+          input[value] == null
+            ? ""
+            : `${input[value].firstName} ${input[value].lastName}`
+        }
         className="search_bar me-2"
         type="search"
         placeholder="Search"
         onChange={search}
       ></input>
-      {/* <input placeholder="Type to search..." onChange={search} /> */}
     </div>
   );
 };

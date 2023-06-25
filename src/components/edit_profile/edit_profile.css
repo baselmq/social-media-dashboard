@@ -1,0 +1,273 @@
+.cover {
+  position: absolute;
+  top: 30%;
+  right: 39px;
+  transform: translate(0, -50%);
+  width: 75%;
+  height: 415px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.profile-photo {
+  position: absolute;
+  width: 179.82px;
+  height: 179.82px;
+  background-size: cover;
+  left: 50px;
+  top: 155px;
+  border-radius: 50%;
+}
+
+.cover-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 300px;
+  left: 195px;
+  width: calc(100% - 330px);
+}
+
+.cover-button {
+  display: flex;
+  align-items: center;
+  
+}
+
+.cover-button button {
+  margin-left: 10px;
+  height: 34px;
+  width: 180px;
+}
+
+@media (max-width: 768px) {
+  .cover {
+    position: static;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    height:450px;
+  }
+
+  .cover-photo {
+    height: 285px;
+  }
+
+  .profile-photo {
+    position: absolute;
+    width: 179.82px;
+    height: 179.82px;
+    left: 30.34px;
+    top: 182px;
+  }
+
+
+
+  
+
+  .cover-container {
+      flex-direction: column;
+      align-items: self-start;
+      left: auto;
+      width: 50%;
+      margin-top: 43px;
+      margin-left: 20px;
+    
+  }
+
+  .cover-button {
+      position:absolute;
+      margin-top: 9px;
+      display: flex;
+      transform: translate(120px,-90px);
+      width: 70px;
+      height: 46px;
+      left: 95px;
+      top: 120px;
+  }
+
+  .cover-text {
+    position:absolute;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(69, 83, 91, 0.942);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: linear-gradient(115deg, #ffeff7 10%, #b5c9df 90%);
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  width: 600px;
+  height: 680px;
+  padding-top: 30px;
+  
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.settings {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 15px;
+  height: 400px;
+}
+
+.setting {
+  padding: 10px;
+  cursor: pointer;
+  height: 60px;
+}
+
+.setting:hover {
+  background-color: #f0f0f0;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.image-profile{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 40px; 
+}
+.upload-photo-text{
+cursor: pointer;
+background-color: white;
+display: inline-block;
+width: 67%;
+height: 50px;
+padding-left: 30px;
+padding-top: 17px;
+border-radius: 10px;
+margin-left: 42px;
+}
+
+
+
+
+.name-input-container {
+  font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+  padding-bottom: 16px;
+  padding-top: 5px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.name-input {
+  margin: 13px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+}
+
+
+.name-input:focus {
+  outline: none;
+  border-color: blue;
+}
+
+.firstName, .lastName{
+padding-left: 15px;
+
+}
+
+.location-input, .email-input, .phone-input{
+margin: 13px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 85%;
+  height: 60px;
+  margin-top: 80px;
+}
+
+.button {
+display: flex;
+align-items: center;
+justify-content: center;
+background: #5E5DF0;
+border-radius: 999px;
+box-shadow: #5E5DF0 0 10px 20px -10px;
+box-sizing: border-box;
+color: #FFFFFF;
+cursor: pointer;
+font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+opacity: 1;
+outline: 0 solid transparent;
+padding: 8px 18px;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: fit-content;
+word-break: break-word;
+border: 0;
+padding-top: 10PX;
+margin: 60PX auto; /* Add this line to center the button horizontally */
+}
+
+
+.name-container {
+margin-top: 10px;
+text-align: center;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center; /* Added */
+}
+
+.name-separator {
+margin: 0 5px;
+}
+
+.first-name,
+.last-name {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 5px;
+margin: 0 5px;
+}
+

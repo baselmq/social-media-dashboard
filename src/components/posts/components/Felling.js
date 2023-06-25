@@ -2,29 +2,33 @@ import React, { useState } from "react";
 import { PathIcons } from "../../../util/PathIcons";
 import Popup from "../../popup/Popup";
 import CreatePost from "./CreatePost";
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../../util/KeyLang";
 
 const Felling = () => {
+  const { t } = useTranslation();
+
   const feelings = [
-    { name: "happy", emoji: "😊" },
-    { name: "sad", emoji: "😢" },
-    { name: "angry", emoji: "😡" },
-    { name: "excited", emoji: "🤩" },
-    { name: "loved", emoji: "❤️" },
-    { name: "confused", emoji: "😕" },
-    { name: "grateful", emoji: "🙏" },
-    { name: "proud", emoji: "👏" },
-    { name: "surprised", emoji: "😮" },
-    { name: "relaxed", emoji: "😌" },
-    { name: "laughing", emoji: "😆" },
-    { name: "worried", emoji: "😟" },
-    { name: "bored", emoji: "😒" },
-    { name: "in love", emoji: "😍" },
-    { name: "hopeful", emoji: "🤞" },
-    { name: "grumpy", emoji: "😠" },
-    { name: "crying", emoji: "😭" },
-    { name: "shocked", emoji: "😱" },
-    { name: "silly", emoji: "🤪" },
-    { name: "content", emoji: "😌" },
+    { name: t(KeyLang.happy), emoji: "😊" },
+    { name: t(KeyLang.sad), emoji: "😢" },
+    { name: t(KeyLang.angry), emoji: "😡" },
+    { name: t(KeyLang.excited), emoji: "🤩" },
+    { name: t(KeyLang.loved), emoji: "❤️" },
+    { name: t(KeyLang.confused), emoji: "😕" },
+    { name: t(KeyLang.grateful), emoji: "🙏" },
+    { name: t(KeyLang.proud), emoji: "👏" },
+    { name: t(KeyLang.surprised), emoji: "😮" },
+    { name: t(KeyLang.relaxed), emoji: "😌" },
+    { name: t(KeyLang.laughing), emoji: "😆" },
+    { name: t(KeyLang.worried), emoji: "😟" },
+    { name: t(KeyLang.bored), emoji: "😒" },
+    { name: t(KeyLang.inLove), emoji: "😍" },
+    { name: t(KeyLang.hopeful), emoji: "🤞" },
+    { name: t(KeyLang.grumpy), emoji: "😠" },
+    { name: t(KeyLang.crying), emoji: "😭" },
+    { name: t(KeyLang.shocked), emoji: "😱" },
+    { name: t(KeyLang.silly), emoji: "🤪" },
+    { name: t(KeyLang.content), emoji: "😌" },
     // Add more feelings and emojis as needed
   ];
 
@@ -50,10 +54,7 @@ const Felling = () => {
 
   return (
     <div>
-      <div className="row sticky-top">
-        {/* ... */}
-      </div>
-    {/*   feelings */}
+      {/*   feelings */}
       {showFeelings && (
         <div className="row">
           <div className="col-md-12">
@@ -62,7 +63,7 @@ const Felling = () => {
                 {filteredFeelings.map((feeling, index) => (
                   <div
                     key={index}
-                    className="col-md-5 p-2 mt-2 rounded-5"
+                    className="col-md-5 p-2 mt-2 rounded-5 me-4"
                     style={{
                       backgroundColor: "white",
                       transition: "background-color 0.3s ease",
@@ -86,7 +87,7 @@ const Felling = () => {
       {/* CreatePost component */}
       {selectedFeeling && (
         <CreatePost
-          text="Feeling "
+          text={t(KeyLang.feeling)}
           selectedFeeling={selectedFeeling}
           selectedFeelingEmoji={selectedFeelingEmoji}
         />
@@ -96,4 +97,3 @@ const Felling = () => {
 };
 
 export default Felling;
-

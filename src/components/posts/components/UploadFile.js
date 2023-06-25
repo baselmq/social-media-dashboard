@@ -1,8 +1,11 @@
 import React, { useRef, useState } from "react";
 import "../../../css/index.css";
 import { PathIcons } from "../../../util/PathIcons";
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../../util/KeyLang";
 const UploadFile = () => {
   const [uploadedFiles, setUploadedFiles] = useState([]);
+  const { t } = useTranslation();
 
   const handleFileChange = (e) => {
     setUploadedFiles([...e.target.files]);
@@ -38,8 +41,10 @@ const UploadFile = () => {
           className="upload-icon upload_area mb-3"
           onClick={() => fileInputRef.current.click()}
         >
-          <span className="d-flex gap-2">{PathIcons.upload}
-            Upload Video or photo</span>
+          <span className="d-flex gap-2">
+            {PathIcons.upload}
+            {t(KeyLang.uploadVideoOrPhoto)}
+          </span>
         </div>
       )}
 

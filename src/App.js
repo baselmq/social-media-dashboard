@@ -2,9 +2,17 @@ import "./css/index.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Signin from "./pages/Signin"
-import Signup from "./pages/Signup"
 function App() {
+  // .*** --------------------language--------------------- ***
+  const currentLanguageCode = cookies.get("i18next") || "en";
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
+  useEffect(() => {
+    document.body.dir = currentLanguage.dir || "ltr";
+    document.title = t("app_title");
+  }, [currentLanguage, t]);
+
+  // .*** --------------------return--------------------- ***
   return (
     <>
     

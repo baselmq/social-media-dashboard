@@ -3,8 +3,12 @@ import ImageUser from "../../cache_image/ImageUser";
 import userData from "../../../data/data";
 import "../../../css/index.css";
 import UploadFile from "./UploadFile";
+import { KeyLang } from "../../../util/KeyLang";
+import { useTranslation } from "react-i18next";
 const CreatePost = (props) => {
   const [postContent, setPostContent] = useState("");
+  const { t } = useTranslation();
+
   const handlePostChange = (e) => {
     setPostContent(e.target.value);
   };
@@ -16,7 +20,11 @@ const CreatePost = (props) => {
       <div className="d-flex align-items-center gap-3">
         <ImageUser image={userData[0].image} width={50} />
         <div className="">{userData[0].firstName}</div>
-        <div style={{fontWeight:"bold"}}>{props.text}{props.selectedFeeling}{props.selectedFeelingEmoji}</div>
+        <div style={{ fontWeight: "bold" }}>
+          {props.text}
+          {props.selectedFeeling}
+          {props.selectedFeelingEmoji}
+        </div>
       </div>
       <div className="mt-4">
         <textarea
@@ -41,7 +49,7 @@ const CreatePost = (props) => {
         disabled={!postContent.trim()}
         onClick={handlePostSubmit}
       >
-        Post
+        {t(KeyLang.postButton)}
       </button>
     </div>
   );

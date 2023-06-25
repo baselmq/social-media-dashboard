@@ -2,8 +2,9 @@ import React from "react";
 import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
 import "./CardActive.css";
-
 const CardActive = ({ id }) => {
+  const { t } = useTranslation();
+
   const data = userData[id];
   const styleItem = {
     borderBottom: "none",
@@ -19,17 +20,32 @@ const CardActive = ({ id }) => {
 
   return (
     <div className="card__active">
-      <h5 className="mb-3">Active</h5>
-      {activeFriends.map((friend) => (
-        <ItemActive
-          key={friend.email}
-          image={friend.image}
-          name={friend.fullName}
-          last=""
-          status={friend.statusLogin}
-        />
-      ))}
-      <ItemActive image={data.image} name={data.firstName} last={data.lastName} status={data.statusLogin} style={styleItem} />
+      <h5 className="mb-3"> Active</h5>
+      <ItemActive
+        image={data.image}
+        name={data.firstName}
+        last={data.lastName}
+        status={data.statusOnline}
+      />
+      <ItemActive
+        image={data.image}
+        name={data.firstName}
+        last={data.lastName}
+        status={data.statusOnline}
+      />
+      <ItemActive
+        image={data.image}
+        name={data.firstName}
+        last={data.lastName}
+        status={data.statusOnline}
+      />
+      <ItemActive
+        image={data.image}
+        name={data.firstName}
+        last={data.lastName}
+        status={data.statusOnline}
+        style={styleItem}
+      />
     </div>
   );
 };

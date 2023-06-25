@@ -1,5 +1,4 @@
 import React from "react";
-import coverImage from "../../assets/images/cover.jpg";
 import "../../css/index.css";
 import userData from "../../data/data";
 import ImageUser from "../cache_image/ImageUser";
@@ -8,11 +7,20 @@ import { PathIcons } from "../../util/PathIcons";
 import Friends from "../friend_card/Friends";
 import { useState } from "react";
 import PopupFriends from "../popup/PopupFriends";
+<<<<<<< HEAD
 
 const CoverProfile = () => {
   const activeUser = localStorage.getItem("activeUser");
   const data = userData.find((user) => user.email === activeUser);
   const [buttonPopup, setButtonPopup] = useState(false);
+=======
+import { useTranslation } from "react-i18next";
+import { KeyLang } from "../../util/KeyLang";
+const CoverProfile = ({ id }) => {
+  const data = userData[id];
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const { t } = useTranslation();
+>>>>>>> 25fa6a4a84dd3a1e7a2c3fdf074ee133db5b41c3
 
   buttonPopup
     ? (document.body.style.overflow = "hidden")
@@ -34,7 +42,11 @@ const CoverProfile = () => {
             <div
               className="fs-6 friends-profile"
               onClick={() => setButtonPopup(true)}
+<<<<<<< HEAD
             >{`${data.friends.length} friends`}</div>
+=======
+            >{`${250} ${t(KeyLang.friend)}`}</div>
+>>>>>>> 25fa6a4a84dd3a1e7a2c3fdf074ee133db5b41c3
             {/* Popup */}
             <PopupFriends
               trigger={buttonPopup}
@@ -45,12 +57,12 @@ const CoverProfile = () => {
             </PopupFriends>
             <div className="d-flex gap-3">
               <Buttons
-                text={"message"}
+                text={t(KeyLang.message)}
                 onPress={click}
                 icon={PathIcons.messenger}
               />
               <Buttons
-                text={"add friend"}
+                text={t(KeyLang.addFriend)}
                 onPress={click}
                 icon={PathIcons.addFriend}
               />

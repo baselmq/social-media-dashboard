@@ -10,38 +10,48 @@
 @import "../components/popup/popup.css";
 @import "../components/posts/components/create_post.css";
 @import "../components/navbar/searchBar.css";
+@import "../components/language/custom_language.css";
+@import "./loading.css";
 :root {
   /* Light mode colors */
-  --background-color: #ffffff;
+  --background-color: #f7f7f8;
+  --card-color: #ffffff;
   --text-color: #252525;
-  --accent-color: #2f4663;
-  --light-accent-color: #277a8f;
+  --btn-color: #a303a0;
+  --btn-text-color: #ffffff;
+  --focus-dropDown: #a303a024;
+  --hover-color: #eeeeee;
+  --border-color: #e9e9e9;
+
+  /* --light-accent-color: #277a8f;
   --secondary-color: #868e96;
-  --card-color: #f7f7f7;
-  --hr-color: #eeeeee;
-  --button-color: #f6f8fa;
+  --button-color: #f6f8fa; */
 
   /* Dark mode colors */
-  --background-color-dark: #0d1117;
-  --text-color-dark: #f7f7f8;
-  --accent-color-dark: #395271;
+  --background-color-dark: #18191a;
+  --card-color-dark: #242526;
+  --text-color-dark: #e7e9ed;
+  --btn-text-color-dark: #ffffff;
+  --btn-color-dark: #a303a0;
+  --focus-dropDown-dark: #a303a024;
+  --hover-color-dark: #272727;
+  --border-color-dark: #383838;
+  /* --accent-color-dark: #395271;
   --light-accent-color-dark: #277a8f;
-  --card-color-dark: #171d26;
   --secondary-color-dark: #868e96;
   --hr-color-dark: #33383f;
-  --button-color-dark: #21262d;
+  --button-color-dark: #21262d; */
 }
 
 /* Dark mode */
 body.dark-mode {
   --background-color: var(--background-color-dark);
-  --text-color: var(--text-color-dark);
-  --accent-color: var(--accent-color-dark);
-  --secondary-color: var(--secondary-color-dark);
   --card-color: var(--card-color-dark);
-  --button-color: var(--button-color-dark);
-  --hr-color: var(--hr-color-dark);
-  --light-icon: var(--dark-icon);
+  --text-color: var(--text-color-dark);
+  --btn-color: var(--btn-color-dark);
+  --focus-dropDown: var(--focus-dropDown-dark);
+  --hover-color: var(--hover-color-dark);
+  --border-color: var(--border-color-dark);
 }
 * {
   padding: 0;
@@ -55,7 +65,7 @@ body {
 }
 
 .bodyAllPages {
-  background-color: #f7f7f8;
+  background-color: var(--background-color);
   padding: 0 100px;
 }
 
@@ -66,8 +76,8 @@ body {
   padding: 0 20px 0 12px;
   height: 40px;
   border-radius: 8px;
-  background-color: #a303a0;
-  color: #fff;
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
 }
 
 /* Large Screens */
