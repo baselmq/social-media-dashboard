@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import NavBar from "../components/navbar/NavBar";
 import AddPost from "../components/posts/AddPost";
 import CardPost from "../components/posts/CardPost";
-
+import userData from "../data/data";
 const Home = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
