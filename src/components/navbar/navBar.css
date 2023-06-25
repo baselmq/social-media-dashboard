@@ -1,5 +1,5 @@
 .custom_nav {
-  background-color: #f7f7f8;
+  background-color: var(--background-color);
 }
 .custom_items {
   width: 100%;
@@ -12,10 +12,10 @@
   font-size: 22px;
 }
 .custom_active i {
-  color: #a303a0;
+  color: var(--btn-color);
 }
 .custom_active {
-  border-bottom: 2.5px solid #a303a0;
+  border-bottom: 2.5px solid var(--btn-color);
 }
 .dropdown__custom:is(:hover, :active, :focus) {
   background-color: transparent;
@@ -35,10 +35,14 @@
   border: none;
 }
 .custom-dropdown-menu {
+  background-color: var(--card-color) !important;
   width: 300px;
 }
+.custom_item_dropDown {
+  background-color: var(--card-color) !important;
+}
 .custom_item_dropDown:focus {
-  background-color: #a303a024 !important;
+  background-color: var(--focus-dropDown) !important;
 }
 /* .container_right_nav{
   position: relative;
@@ -48,5 +52,5 @@
   right: 70px;
 }
 .active {
-  color: #a303a0;
+  color: var(--btn-color);
 }

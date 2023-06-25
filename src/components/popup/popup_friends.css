@@ -15,7 +15,7 @@
   position: relative;
   width: 100%;
   max-width: 75rem;
-  background-color: #fff;
+  background-color: var(--card-color);
   border-radius: 20px;
   max-height: 700px;
   padding: 25px;

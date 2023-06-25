@@ -4,14 +4,15 @@
   width: 100%;
   height: 100%;
   resize: none;
+  background-color: var(--card-color);
 }
 .btn_create_post {
   border: none;
   outline: none;
   width: 100%;
   height: 40px;
-  background-color: #a303a0;
-  color: #fff;
+  background-color: var(--btn-color);
+  color: var(--card-color);
   border-radius: 8px;
 }
 .upload_area {
@@ -19,9 +20,9 @@
   flex-direction: row;
   justify-content: center;
   gap: 2%;
-  border: gainsboro 1px solid;
+  border: var(--border-color) 1px solid;
   padding: 7%;
-  background-color: #e4e6eb;
+  background-color: var(--hover-colors);
   border-radius: 8px;
 }
 .display__upload {

@@ -14,20 +14,20 @@
   position: relative;
   width: 100%;
   max-width: 33rem;
-  background-color: #fff;
+  background-color: var(--card-color);
   border-radius: 10px;
   max-height: 700px;
   padding: 25px;
 }
 .header_popup {
-  border-bottom: 1px solid #d4d4d4;
+  border-bottom: 1px solid var(--border-color);
 }
 .popup-inner .close-btn:hover {
   cursor: pointer;
 }
 
 .custom_btn-close {
-  background-color: #e4e6eb !important;
+  background-color: var(--hover-color) !important;
   display: flex;
   justify-content: center;
   align-items: center;

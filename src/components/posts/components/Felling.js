@@ -63,7 +63,7 @@ const Felling = () => {
                 {filteredFeelings.map((feeling, index) => (
                   <div
                     key={index}
-                    className="col-md-5 p-2 mt-2 rounded-5"
+                    className="col-md-5 p-2 mt-2 rounded-5 me-4"
                     style={{
                       backgroundColor: "white",
                       transition: "background-color 0.3s ease",

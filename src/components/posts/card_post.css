@@ -1,5 +1,5 @@
 .container_post {
-  background-color: #fff;
+  background-color: var(--card-color);
   border-radius: 10px;
 }
 .user_name_post {

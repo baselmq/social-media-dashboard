@@ -15,11 +15,14 @@ import CustomLanguage from "../language/CustomLanguage";
 import Popup from "../popup/Popup";
 import { useTranslation } from "react-i18next";
 import { KeyLang } from "../../util/KeyLang";
+import DarkMode from "../DarkMode/DarkMode";
+
 const NavBar = () => {
   const [results, setResults] = useState([]);
   const [value, setValue] = useState("");
   const [settingPopup, setSettingPopup] = useState(false);
   const [langPopup, setLangPopup] = useState(false);
+  const [themePopup, setThemePopup] = useState(false);
   const { t } = useTranslation();
 
   return (
@@ -136,6 +139,7 @@ const NavBar = () => {
                   text={t(KeyLang.display)}
                   links={false}
                   icon={PathIcons.darkMode}
+                  onPress={() => setThemePopup(true)}
                 />
                 {/* ***----------------- DropdownMenu Sign Out -----------------*** */}
                 <DropdownMenu
@@ -154,6 +158,13 @@ const NavBar = () => {
         title={t(KeyLang.language)}
       >
         <CustomLanguage setTrigger={setLangPopup} />
+      </Popup>{" "}
+      <Popup
+        trigger={themePopup}
+        setTrigger={setThemePopup}
+        title={t(KeyLang.display)}
+      >
+        <DarkMode />
       </Popup>
     </>
   );

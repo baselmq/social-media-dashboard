@@ -27,7 +27,6 @@ const CustomLanguage = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    console.log("Setting page stuff");
     document.body.dir = currentLanguage.dir || "ltr";
     document.title = t("app_title");
   }, [currentLanguage, t]);
@@ -35,13 +34,14 @@ const CustomLanguage = () => {
   return (
     <div className="row">
       {languages.map(({ code, name, country_code, flag }) => (
-        <CustomFlags
-          code={code}
-          name={name}
-          country_code={country_code}
-          flag={flag}
-          currentLangCode={currentLanguageCode}
-        />
+        <div className="col-lg-6" key={country_code}>
+          <CustomFlags
+            code={code}
+            name={name}
+            flag={flag}
+            currentLangCode={currentLanguageCode}
+          />
+        </div>
       ))}
     </div>
   );
@@ -52,21 +52,19 @@ const CustomFlags = (props) => {
     opacity: props.currentLangCode === props.code ? 0.5 : 1,
   };
   return (
-    <div className="col-lg-6" key={props.country_code}>
-      <div
-        className="box_lang d-flex flex-column align-items-center"
-        onClick={() => {
-          i18next.changeLanguage(props.code);
-        }}
-      >
-        <img
-          src={props.flag}
-          className="image_flag"
-          alt={props.name}
-          style={styleImage}
-        />
-        <span style={styleImage}>{props.name}</span>
-      </div>
+    <div
+      className="box_lang d-flex flex-column align-items-center"
+      onClick={() => {
+        i18next.changeLanguage(props.code);
+      }}
+    >
+      <img
+        src={props.flag}
+        className="image_flag"
+        alt={props.name}
+        style={styleImage}
+      />
+      <span style={styleImage}>{props.name}</span>
     </div>
   );
 };

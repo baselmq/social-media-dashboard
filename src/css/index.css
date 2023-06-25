@@ -11,6 +11,7 @@
 @import "../components/posts/components/create_post.css";
 @import "../components/navbar/searchBar.css";
 @import "../components/language/custom_language.css";
+@import "./loading.css";
 :root {
   /* Light mode colors */
   --background-color: #f7f7f8;
@@ -20,6 +21,7 @@
   --btn-text-color: #ffffff;
   --focus-dropDown: #a303a024;
   --hover-color: #eeeeee;
+  --border-color: #e9e9e9;
 
   /* --light-accent-color: #277a8f;
   --secondary-color: #868e96;
@@ -32,8 +34,8 @@
   --btn-text-color-dark: #ffffff;
   --btn-color-dark: #a303a0;
   --focus-dropDown-dark: #a303a024;
-  --hover-color-dark: #eeeeee;
-
+  --hover-color-dark: #272727;
+  --border-color-dark: #383838;
   /* --accent-color-dark: #395271;
   --light-accent-color-dark: #277a8f;
   --secondary-color-dark: #868e96;
@@ -49,6 +51,7 @@ body.dark-mode {
   --btn-color: var(--btn-color-dark);
   --focus-dropDown: var(--focus-dropDown-dark);
   --hover-color: var(--hover-color-dark);
+  --border-color: var(--border-color-dark);
 }
 * {
   padding: 0;
