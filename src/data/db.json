@@ -9,12 +9,21 @@
       "gender": "Male",
       "location": "Amman - Jordan",
       "birthDate": "June 26, 1980",
-      "email": "charles5182@ummoh.com",
+      "email": "char1les5182@ummoh.com",
       "phone": "33757005467",
+      "password": "123456789",
       "statusLogin": true,
-      "friends": [{ "fullName": "John Doe", "email": "johndoe@example.com" }],
+      "friends": [
+        {
+          "fullName": "John Doe",
+          "email": "johndoe@example.com"
+        }
+      ],
       "friendsRequest": [
-        { "fullName": "Jane Smith", "email": "janesmith@example.com" }
+        {
+          "fullName": "Jane Smith",
+          "email": "janesmith@example.com"
+        }
       ],
       "post": [
         {
@@ -43,7 +52,6 @@
         }
       ]
     },
-
     {
       "id": 1,
       "firstName": "Sarah",
@@ -55,6 +63,7 @@
       "birthDate": "March 10, 1995",
       "email": "sarahjohnson@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -142,6 +151,7 @@
       "birthDate": "January 1, 1995",
       "email": "johndoe@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -229,6 +239,7 @@
       "birthDate": "March 10, 1990",
       "email": "emilyjohnson@example.com",
       "phone": "9876543210",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -316,6 +327,7 @@
       "birthDate": "January 5, 1995",
       "email": "sophiawilson@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -403,6 +415,7 @@
       "birthDate": "December 5, 1995",
       "email": "sophiaanderson@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -490,6 +503,7 @@
       "birthDate": "August 12, 1990",
       "email": "liamwilson@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -577,6 +591,7 @@
       "birthDate": "December 5, 1995",
       "email": "sophiaanderson@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -664,6 +679,7 @@
       "birthDate": "January 15, 1992",
       "email": "oliviamartin@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -751,6 +767,7 @@
       "birthDate": "August 10, 1990",
       "email": "olivertaylor@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {
@@ -838,6 +855,7 @@
       "birthDate": "March 25, 1995",
       "email": "davidsmith@example.com",
       "phone": "1234567890",
+      "password": "123456789",
       "statusLogin": true,
       "friends": [
         {

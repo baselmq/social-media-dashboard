@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../css/index.css";
+// import "bootstrap/dist/js/bootstrap.js";
 import { SearchBar } from "./SearchBar";
 import { SearchResultList } from "./SearchResultList";
 import ImageUser from "../cache_image/ImageUser";
 import userData from "../../data/data";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DropdownMenu from "./DropdownMenu";
 import { PathIcons } from "../../util/PathIcons";
 import EditProfileNew from "../edit_profile/EditProfileNew";
@@ -15,6 +16,7 @@ import Popup from "../popup/Popup";
 import { useTranslation } from "react-i18next";
 import { KeyLang } from "../../util/KeyLang";
 import DarkMode from "../DarkMode/DarkMode";
+import logo from "../../assets/icons/logo_text.svg";
 
 const NavBar = () => {
   const [results, setResults] = useState([]);
@@ -24,19 +26,16 @@ const NavBar = () => {
   const [themePopup, setThemePopup] = useState(false);
   const { t } = useTranslation();
 
-  const activeUser = localStorage.getItem("activeUser");
-  const currentUser = userData.find((user) => user.email === activeUser);
-
   return (
     <>
       <nav className="navbar navbar-expand-sm custom_nav">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Brand
+            <img src={logo} alt="logo" style={{ width: "120px" }} />
           </Link>
           <ul className="navbar-nav custom-items">
             <li className="nav-item custom_item_nav custom_active  d-flex justify-content-center">
-              <Link className="nav-link " to="/">
+              <Link className="nav-link " to="/home">
                 <i className="fa-solid fa-house"></i>
               </Link>
             </li>
@@ -48,7 +47,7 @@ const NavBar = () => {
             <li className="nav-item custom_item_nav d-flex justify-content-center">
               <Link
                 className="nav-link"
-                to="/"
+                to="/setting"
                 onClick={() => setSettingPopup(true)}
               >
                 <i className="fa-sharp fa-solid fa-gear"></i>
@@ -83,78 +82,74 @@ const NavBar = () => {
                   <SearchResultList
                     results={results}
                     setResult={setResults}
-                    setValue={setValue}
+                    // setValue={setValue}
                   />
                 )}
                 {}
               </div>
             </form>
-            {currentUser && (
-              <>
-                <span className="mx-3">{`${currentUser.firstName} ${currentUser.lastName}`}</span>
+            <span className="mx-3">{userData[0].name}</span>
 
-                <div className="dropdown">
-                  <button
-                    className="btn_dropdown"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <ImageUser
-                      image={currentUser.image}
-                      name={`${currentUser.firstName} ${currentUser.lastName}`}
-                      width={40}
-                    />
-                  </button>
-                  <ul className="dropdown-menu dropdown-menu-end custom-dropdown-menu pt-3">
-                    {/* ***----------------- DropdownMenu profile -----------------*** */}
-                    <DropdownMenu
-                      text={userData[0].firstName}
-                      to={"/profile"}
-                      links={true}
-                      image={userData[0].image}
-                    />
-                    {/* ***----------------- DropdownMenu Setting -----------------*** */}
-                    <DropdownMenu
-                      text={t(KeyLang.setting)}
-                      links={false}
-                      icon={PathIcons.settings}
-                      onPress={() => setSettingPopup(true)}
-                    />
-                    <PopupEditProfile
-                      trigger={settingPopup}
-                      setTrigger={setSettingPopup}
-                      title={t(KeyLang.setting)}
-                    >
-                      <EditProfileNew />
-                    </PopupEditProfile>
+            <div className="dropdown">
+              <button
+                className="btn_dropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <ImageUser
+                  image={userData[0].image}
+                  name={userData[0].name}
+                  width={40}
+                />
+              </button>
+              <ul className="dropdown-menu dropdown-menu-end custom-dropdown-menu pt-3">
+                {/* ***----------------- DropdownMenu profile -----------------*** */}
+                <DropdownMenu
+                  text={userData[0].firstName}
+                  to={"/profile"}
+                  links={true}
+                  image={userData[0].image}
+                />
+                {/* ***----------------- DropdownMenu Setting -----------------*** */}
+                <DropdownMenu
+                  text={t(KeyLang.setting)}
+                  links={false}
+                  icon={PathIcons.settings}
+                  onPress={() => setSettingPopup(true)}
+                />
+                <PopupEditProfile
+                  trigger={settingPopup}
+                  setTrigger={setSettingPopup}
+                  title={t(KeyLang.setting)}
+                >
+                  <EditProfileNew />
+                </PopupEditProfile>
 
-                    {/* ***----------------- DropdownMenu Language -----------------*** */}
+                {/* ***----------------- DropdownMenu Language -----------------*** */}
 
-                    <DropdownMenu
-                      text={t(KeyLang.language)}
-                      links={false}
-                      icon={PathIcons.language}
-                      onPress={() => setLangPopup(true)}
-                    />
+                <DropdownMenu
+                  text={t(KeyLang.language)}
+                  links={false}
+                  icon={PathIcons.language}
+                  onPress={() => setLangPopup(true)}
+                />
 
-                    {/* ***----------------- DropdownMenu Display -----------------*** */}
-                    <DropdownMenu
-                      text={t(KeyLang.display)}
-                      links={false}
-                      icon={PathIcons.darkMode}
-                      onPress={() => setThemePopup(true)}
-                    />
-                    {/* ***----------------- DropdownMenu Sign Out -----------------*** */}
-                    <DropdownMenu
-                      text={t(KeyLang.SignOut)}
-                      to={"/"}
-                      icon={PathIcons.signOut}
-                    />
-                  </ul>
-                </div>
-              </>
-            )}
+                {/* ***----------------- DropdownMenu Display -----------------*** */}
+                <DropdownMenu
+                  text={t(KeyLang.display)}
+                  links={false}
+                  icon={PathIcons.darkMode}
+                  onPress={() => setThemePopup(true)}
+                />
+                {/* ***----------------- DropdownMenu Sign Out -----------------*** */}
+                <DropdownMenu
+                  text={t(KeyLang.SignOut)}
+                  to={"/"}
+                  icon={PathIcons.signOut}
+                />
+              </ul>
+            </div>
           </div>
         </div>
       </nav>

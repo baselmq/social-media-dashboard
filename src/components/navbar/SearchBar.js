@@ -21,11 +21,6 @@ export const SearchBar = ({ setResults, value }) => {
     <div className="input_wrapper">
       {PathIcons.search}
       <input
-        value={
-          input[value] == null
-            ? ""
-            : `${input[value].firstName} ${input[value].lastName}`
-        }
         className="search_bar me-2"
         type="search"
         placeholder="Search"

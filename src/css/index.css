@@ -12,6 +12,7 @@
 @import "../components/navbar/searchBar.css";
 @import "../components/language/custom_language.css";
 @import "./loading.css";
+@import "./login.css";
 :root {
   /* Light mode colors */
   --background-color: #f7f7f8;

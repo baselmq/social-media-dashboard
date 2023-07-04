@@ -2,12 +2,14 @@ import "./css/index.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-
-import Signin from "./pages/Signin";
-import Signup from "./pages/Signup";
 import { useTranslation } from "react-i18next";
 import React, { useEffect } from "react";
 import cookies from "js-cookie";
+import LoginPage from "./pages/LoginPage";
+import Register from "./pages/Register";
+import AddInformation from "./components/sign_up/AddInformation";
+import FormContextProvider from "./context/FormContext";
+import RegisterContextProvider from "./context/RegisterProvider";
 const languages = [
   {
     code: "en",
@@ -33,15 +35,23 @@ function App() {
 
   // .*** --------------------return--------------------- ***
   return (
-    <>
+    <FormContextProvider>
       <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/Signin" element={<Signin />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route
+          path="/"
+          element={
+            <RegisterContextProvider>
+              <Register />
+            </RegisterContextProvider>
+          }
+        />
+        <Route path="/addInformation" element={<AddInformation />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         {/* <Route path="/profile" element={<Profile />} /> */}
       </Routes>
-    </>
+    </FormContextProvider>
   );
 }
 

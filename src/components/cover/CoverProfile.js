@@ -10,10 +10,10 @@ import PopupFriends from "../popup/PopupFriends";
 import { useTranslation } from "react-i18next";
 import { KeyLang } from "../../util/KeyLang";
 const CoverProfile = ({ id }) => {
-  const activeUser = localStorage.getItem("activeUser");
-  const data = userData.find((user) => user.email === activeUser);
+  const data = userData[id];
   const [buttonPopup, setButtonPopup] = useState(false);
   const { t } = useTranslation();
+
   buttonPopup
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "auto");
@@ -24,7 +24,7 @@ const CoverProfile = ({ id }) => {
         <img className="cover_profile" src={data.imageCover} alt="cover" />
         <ImageUser
           image={data.image}
-          name={`${data.firstName} ${data.lastName}`}
+          name={data.name}
           classImage={"image_profile"}
         />
         <div className="bottom_cover mt-4 px-5">
@@ -34,7 +34,7 @@ const CoverProfile = ({ id }) => {
             <div
               className="fs-6 friends-profile"
               onClick={() => setButtonPopup(true)}
-            >{`${data.friends.length} ${t(KeyLang.friend)}`}</div>
+            >{`${250} ${t(KeyLang.friend)}`}</div>
             {/* Popup */}
             <PopupFriends
               trigger={buttonPopup}
@@ -61,9 +61,7 @@ const CoverProfile = ({ id }) => {
     </div>
   );
 };
-
 function click() {
   console.log(1);
 }
-
 export default CoverProfile;

@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register__form h4 {
+  text-align: center;
+  color: #a303a0;
+}
+.image__register {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .image__register {
+    width: 320px;
+    height: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .image__register {
+    display: none;
+  }
+  .register__page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.btn-custom-register {
+  color: var(--btn-color);
+  background-color: #fff;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid var(--btn-color);
+  transition: 0.3s;
+}
+
+.btn-custom-register:hover {
+  transition: 0.4s;
+  background-color: #a303a0 !important;
+}
+
+.invalid {
+  border-color: #d93025;
+}
+.error {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  color: #d93025;
+  font-size: 13px;
+}
+
+.text__sign {
+  font-size: 15px;
+}
+.text__sign a {
+  color: #a303a0;
+}
+.text__sign a:hover {
+  text-decoration: underline !important;
+}
+
+.navbar-sign {
+  color: #a303a0;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+}
+
+.navbar-sign:hover {
+  color: #a303a0;
+}
+
+.btn-custom-register:hover {
+  border-color: #a303a0;
+}
+.forget__pass:hover {
+  cursor: pointer;
+}
+.valid-feedback {
+  color: green;
+  font-size: larger;
+}

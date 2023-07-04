@@ -2,7 +2,6 @@
   background-color: var(--card-color);
   border-radius: 10px;
   padding: 30px;
-  width: fit-content;
 }
 
 .ItemActive {

@@ -39,11 +39,14 @@ export class PathIcons {
   static upload = (
     <i className="fa-solid fa-cloud-arrow-up" style={iconPost}></i>
   );
+  static camera = (<i className="fa-solid fa-camera" style={iconPost}></i>);
+
   static settings = (<i className="fa-solid fa-gear" style={menuNav}></i>);
   static language = (<i className="fi fi-rr-language" style={menuNav}></i>);
   static darkMode = (<i className="fa-solid fa-moon" style={menuNav}></i>);
   static signOut = (<i className="fi fi-br-sign-out-alt" style={menuNav}></i>);
   static searchIcon = (<i className="fi fi-rr-search" style={iconPost}></i>);
+  static user = (<i className="fi fi-sr-circle-user"></i>);
   static close = (
     <i
       className="fa-solid fa-circle-xmark"

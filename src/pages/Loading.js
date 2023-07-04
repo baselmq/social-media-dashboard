@@ -1,9 +1,16 @@
 import React from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
-const LoadingPage = () => {
+const LoadingPage = ({ loading }) => {
   return (
-    <div className="py-4 text-center loading_page">
-      <h3>Loading..</h3>
+    <div className="sweet-loading d-flex justify-content-center align-items-center">
+      <ClipLoader
+        color={"#a303a0"}
+        loading={loading}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
     </div>
   );
 };

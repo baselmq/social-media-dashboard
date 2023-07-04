@@ -4,7 +4,7 @@ import ImageUser from "../cache_image/ImageUser";
 export const SearchResultList = ({ results, setResult, setValue }) => {
   const setSearch = (value) => {
     setResult("");
-    setValue(value);
+    // setValue(value);
   };
   return (
     <div className="results-list p-2">
